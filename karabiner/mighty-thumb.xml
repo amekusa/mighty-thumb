@@ -6,7 +6,7 @@
       <name>Turn your thumb key into an extra modifier key.</name>
     </item>
     <item>
-      <name>Thumb + E/S/D/F = Up/Left/Down/Right</appendix>
+      <name>Thumb + E/S/D/F = Up/Left/Down/Right</name>
       <identifier>remap.amekusa.mightythumb.cursor</identifier>
       <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
       <autogen>__KeyToKey__ KeyCode::E, ModifierFlag::EXTRA1, KeyCode::CURSOR_UP</autogen>
