@@ -42,7 +42,7 @@
 | <kbd>英数</kbd> + [ <kbd>C</kbd>, <kbd>X</kbd>, <kbd>V</kbd>, <kbd>Z</kbd> ] | <kbd>⌘</kbd> + [ <kbd>C</kbd>, <kbd>X</kbd>, <kbd>V</kbd>, <kbd>Z</kbd> ] | コピー, カット, ペースト, アンドゥ
 | <kbd>英数</kbd> + [ <kbd>A</kbd>, <kbd>G</kbd> ] | <kbd>Option</kbd> + [ <kbd>←</kbd>, <kbd>→</kbd> ] |  前, 次の単語へ
 | <kbd>英数</kbd> + [ <kbd>Q</kbd>, <kbd>T</kbd> ] | <kbd>⌘</kbd> + [ <kbd>←</kbd>, <kbd>→</kbd> ] | 行頭, 行末へ
-| <kbd>英数</kbd> + [ <kbd>U</kbd>, <kbd>H</kbd>, <kbd>K</kbd>, <kbd>L</kbd> ] | <kbd>Shift</kbd> + [ <kbd>↑</kbd>, <kbd>←</kbd>, <kbd>↓</kbd>, <kbd>→</kbd> ] | 選択
+| <kbd>英数</kbd> + [ <kbd>I</kbd>, <kbd>J</kbd>, <kbd>K</kbd>, <kbd>L</kbd> ] | <kbd>Shift</kbd> + [ <kbd>↑</kbd>, <kbd>←</kbd>, <kbd>↓</kbd>, <kbd>→</kbd> ] | 選択
 | <kbd>英数</kbd> + [ <kbd>H</kbd>, <kbd>N</kbd> ] | <kbd>Delete</kbd>, <kbd>fn</kbd> + <kbd>Delete</kbd> | 後方, 前方削除
 
 ### ThumbSense 拡張機能
