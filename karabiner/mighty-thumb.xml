@@ -83,8 +83,16 @@
         <config_only>notsave.thumbsense</config_only>
         <name>Touch + U/O = Previous/Next window</name>
         <identifier>remap.amekusa.mightythumb.touch.window.switch</identifier>
-        <autogen>__KeyToKey__ KeyCode::U, KeyCode::TAB, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L</autogen>
-        <autogen>__KeyToKey__ KeyCode::O, KeyCode::TAB, ModifierFlag::CONTROL_L</autogen>
+        <block>
+          <not>ECLIPSE</not>
+          <autogen>__KeyToKey__ KeyCode::U, KeyCode::TAB, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L</autogen>
+          <autogen>__KeyToKey__ KeyCode::O, KeyCode::TAB, ModifierFlag::CONTROL_L</autogen>
+        </block>
+        <block>
+          <only>ECLIPSE</only>
+          <autogen>__KeyToKey__ KeyCode::U, KeyCode::PAGEUP, ModifierFlag::CONTROL_L</autogen>
+          <autogen>__KeyToKey__ KeyCode::O, KeyCode::PAGEDOWN, ModifierFlag::CONTROL_L</autogen>
+        </block>
       </item>
     </item>
   </item>
