@@ -13,6 +13,10 @@
       <equal>com.springsource.sts</equal>
       <equal>org.springsource.sts.ide</equal>
     </appdef>
+    <appdef>
+      <appname>BLENDER</appname>
+      <equal>org.blenderfoundation.blender</equal>
+    </appdef>
     <item>
       <name>Thumb + E/S/D/F = Up/Left/Down/Right</name>
       <identifier>remap.amekusa.mightythumb.cursor</identifier>
