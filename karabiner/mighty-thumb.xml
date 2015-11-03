@@ -6,16 +6,20 @@
       <name>Turn your thumb key into an extra modifier key.</name>
     </item>
     <appdef>
-      <appname>ECLIPSE</appname>
+      <appname>Atom</appname>
+      <equal>com.github.atom</equal>
+    </appdef>
+    <appdef>
+      <appname>Blender</appname>
+      <equal>org.blenderfoundation.blender</equal>
+    </appdef>
+    <appdef>
+      <appname>Eclipse</appname>
       <equal>org.eclipse.eclipse</equal>
       <equal>org.eclipse.platform.ide</equal>
       <equal>org.eclipse.sdk.ide</equal>
       <equal>com.springsource.sts</equal>
       <equal>org.springsource.sts.ide</equal>
-    </appdef>
-    <appdef>
-      <appname>BLENDER</appname>
-      <equal>org.blenderfoundation.blender</equal>
     </appdef>
     <item>
       <name>Thumb + E/S/D/F = Up/Left/Down/Right</name>
@@ -50,14 +54,14 @@
       <autogen>__KeyToKey__ KeyCode::Z, ModifierFlag::EXTRA1, KeyCode::Z, ModifierFlag::COMMAND_L</autogen>
     </item>
     <item>
-      <name>Thumb + A/G = Previous/Next word</name>
+      <name>Thumb + A/G = Previous/Next Word</name>
       <identifier>remap.amekusa.mightythumb.edit.cursor.word</identifier>
       <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
       <autogen>__KeyToKey__ KeyCode::A, ModifierFlag::EXTRA1, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L</autogen>
       <autogen>__KeyToKey__ KeyCode::G, ModifierFlag::EXTRA1, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L</autogen>
     </item>
     <item>
-      <name>Thumb + Q/T = Beginning/End of line</name>
+      <name>Thumb + Q/T = Beginning/End of Line</name>
       <identifier>remap.amekusa.mightythumb.edit.cursor.line</identifier>
       <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
       <autogen>__KeyToKey__ KeyCode::Q, ModifierFlag::EXTRA1, KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L</autogen>
@@ -73,7 +77,7 @@
       <autogen>__KeyToKey__ KeyCode::L, ModifierFlag::EXTRA1, KeyCode::CURSOR_RIGHT, ModifierFlag::SHIFT_L</autogen>
     </item>
     <item>
-      <name>Thumb + H/N = Backward/Forward delete</name>
+      <name>Thumb + H/N = Backward/Forward Delete</name>
       <identifier>remap.amekusa.mightythumb.edit.delete</identifier>
       <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
       <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::EXTRA1, KeyCode::DELETE</autogen>
@@ -86,25 +90,32 @@
       </item>
       <item>
         <config_only>notsave.thumbsense</config_only>
-        <name>Touch + M/I = Close/New window</name>
+        <name>Touch + M/I = Close/New Window</name>
         <identifier>remap.amekusa.mightythumb.touch.window</identifier>
         <autogen>__KeyToKey__ KeyCode::M, KeyCode::W, ModifierFlag::COMMAND_L</autogen>
         <autogen>__KeyToKey__ KeyCode::I, KeyCode::T, ModifierFlag::COMMAND_L</autogen>
       </item>
       <item>
         <config_only>notsave.thumbsense</config_only>
-        <name>Touch + U/O = Previous/Next window</name>
+        <name>Touch + U/O = Previous/Next Window</name>
         <identifier>remap.amekusa.mightythumb.touch.window.switch</identifier>
         <block>
-          <not>ECLIPSE</not>
+          <not>Eclipse</not>
           <autogen>__KeyToKey__ KeyCode::U, KeyCode::TAB, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L</autogen>
           <autogen>__KeyToKey__ KeyCode::O, KeyCode::TAB, ModifierFlag::CONTROL_L</autogen>
+          <autogen>__KeyToKey__ KeyCode::N, KeyCode::VK_MOUSEKEY_BUTTON_MIDDLE</autogen>
         </block>
         <block>
-          <only>ECLIPSE</only>
+          <only>Eclipse</only>
           <autogen>__KeyToKey__ KeyCode::U, KeyCode::PAGEUP, ModifierFlag::CONTROL_L</autogen>
           <autogen>__KeyToKey__ KeyCode::O, KeyCode::PAGEDOWN, ModifierFlag::CONTROL_L</autogen>
         </block>
+      </item>
+      <item>
+        <config_only>notsave.thumbsense</config_only>
+        <name>Touch + N = Middle Click</name>
+        <identifier>remap.amekusa.mightythumb.touch.mouse.middle</identifier>
+        <autogen>__KeyToKey__ KeyCode::N, KeyCode::VK_MOUSEKEY_BUTTON_MIDDLE</autogen>
       </item>
     </item>
   </item>
