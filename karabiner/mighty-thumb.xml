@@ -84,6 +84,53 @@
       <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::EXTRA1, KeyCode::DELETE, ModifierFlag::FN</autogen>
     </item>
     <item>
+      <name>Complex Operations</name>
+      <item>
+        <name>Only works on Atom, Eclipse.</name>
+      </item>
+      <item>
+        <name>Thumb + M = Delete Line</name>
+        <identifier>remap.amekusa.mightythumb.edit.delete.line</identifier>
+        <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
+        <block>
+          <only>Atom</only>
+          <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::EXTRA1, KeyCode::K, ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L</autogen>
+        </block>
+        <block>
+          <only>Eclipse</only>
+          <autogen>__KeyToKey__ KeyCode::M, ModifierFlag::EXTRA1, KeyCode::D, ModifierFlag::COMMAND_L</autogen>
+        </block>
+      </item>
+      <item>
+        <name>Thumb + &lt;/&gt; = Move Line Up/Down</name>
+        <identifier>remap.amekusa.mightythumb.edit.move.line</identifier>
+        <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
+        <block>
+          <only>Atom</only>
+          <autogen>__KeyToKey__ KeyCode::COMMA, ModifierFlag::EXTRA1, KeyCode::CURSOR_UP, ModifierFlag::COMMAND_L | ModifierFlag::CONTROL_L</autogen>
+          <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::EXTRA1, KeyCode::CURSOR_DOWN, ModifierFlag::COMMAND_L | ModifierFlag::CONTROL_L</autogen>
+        </block>
+        <block>
+          <only>Eclipse</only>
+          <autogen>__KeyToKey__ KeyCode::COMMA, ModifierFlag::EXTRA1, KeyCode::CURSOR_UP, ModifierFlag::OPTION_L</autogen>
+          <autogen>__KeyToKey__ KeyCode::DOT, ModifierFlag::EXTRA1, KeyCode::CURSOR_DOWN, ModifierFlag::OPTION_L</autogen>
+        </block>
+      </item>
+      <item>
+        <name>Thumb + Return = New Line Below</name>
+        <identifier>remap.amekusa.mightythumb.edit.newline</identifier>
+        <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
+        <block>
+          <only>Atom</only>
+          <autogen>__KeyToKey__ KeyCode::RETURN, ModifierFlag::EXTRA1, KeyCode::RETURN, ModifierFlag::COMMAND_L</autogen>
+        </block>
+        <block>
+          <only>Eclipse</only>
+          <autogen>__KeyToKey__ KeyCode::RETURN, ModifierFlag::EXTRA1, KeyCode::RETURN, ModifierFlag::SHIFT_L</autogen>
+        </block>
+      </item>
+    </item>
+    <item>
       <name>ThumbSense Combination</name>
       <item>
         <name>Karabiner multi-touch extension must be enabled.</name>
