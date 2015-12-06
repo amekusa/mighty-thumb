@@ -36,21 +36,36 @@
 |:--|:--|:--
 | <kbd>かな</kbd> | - | IME 有効
 | <kbd>英数</kbd> | - | IME 無効
-| <kbd>英数</kbd> + [ <kbd>E</kbd>, <kbd>S</kbd>, <kbd>D</kbd>, <kbd>F</kbd> ] | <kbd>↑</kbd>, <kbd>←</kbd>, <kbd>↓</kbd>, <kbd>→</kbd> | カーソル移動
-| <kbd>英数</kbd> + [ <kbd>O</kbd>, <kbd>U</kbd> ] | <kbd>Tab</kbd>, <kbd>Shift</kbd> + <kbd>Tab</kbd> | インデント, アンインデント
-| <kbd>英数</kbd> + [ <kbd>W</kbd>, <kbd>R</kbd> ] | <kbd>Page Up</kbd>, <kbd>Page Down</kbd> | ページ上, 下へ
-| <kbd>英数</kbd> + [ <kbd>C</kbd>, <kbd>X</kbd>, <kbd>V</kbd>, <kbd>Z</kbd> ] | <kbd>⌘</kbd> + [ <kbd>C</kbd>, <kbd>X</kbd>, <kbd>V</kbd>, <kbd>Z</kbd> ] | コピー, カット, ペースト, アンドゥ
-| <kbd>英数</kbd> + [ <kbd>A</kbd>, <kbd>G</kbd> ] | <kbd>Option</kbd> + [ <kbd>←</kbd>, <kbd>→</kbd> ] |  前, 次の単語へ
-| <kbd>英数</kbd> + [ <kbd>Q</kbd>, <kbd>T</kbd> ] | <kbd>⌘</kbd> + [ <kbd>←</kbd>, <kbd>→</kbd> ] | 行頭, 行末へ
-| <kbd>英数</kbd> + [ <kbd>I</kbd>, <kbd>J</kbd>, <kbd>K</kbd>, <kbd>L</kbd> ] | <kbd>Shift</kbd> + [ <kbd>↑</kbd>, <kbd>←</kbd>, <kbd>↓</kbd>, <kbd>→</kbd> ] | 選択
-| <kbd>英数</kbd> + [ <kbd>H</kbd>, <kbd>N</kbd> ] | <kbd>Delete</kbd>, <kbd>Fn</kbd> + <kbd>Delete</kbd> | 後方, 前方削除
+| <kbd>英数</kbd> + [ <kbd>E</kbd> / <kbd>S</kbd> / <kbd>D</kbd> / <kbd>F</kbd> ] | <kbd>↑</kbd> / <kbd>←</kbd> / <kbd>↓</kbd> / <kbd>→</kbd> | カーソル移動
+| <kbd>英数</kbd> + [ <kbd>O</kbd> / <kbd>U</kbd> ] | <kbd>Tab</kbd> / <kbd>Shift</kbd> + <kbd>Tab</kbd> | インデント / アンインデント
+| <kbd>英数</kbd> + [ <kbd>W</kbd> / <kbd>R</kbd> ] | <kbd>Page Up</kbd> / <kbd>Page Down</kbd> | ページ上 / 下へ
+| <kbd>英数</kbd> + [ <kbd>C</kbd> / <kbd>X</kbd> / <kbd>V</kbd> / <kbd>Z</kbd> ] | <kbd>⌘</kbd> + [ <kbd>C</kbd> / <kbd>X</kbd> / <kbd>V</kbd> / <kbd>Z</kbd> ] | コピー / カット / ペースト / アンドゥ
+| <kbd>英数</kbd> + [ <kbd>A</kbd> / <kbd>G</kbd> ] | <kbd>Option</kbd> + [ <kbd>←</kbd> / <kbd>→</kbd> ] |  前 / 次の単語へ
+| <kbd>英数</kbd> + [ <kbd>Q</kbd> / <kbd>T</kbd> ] | <kbd>⌘</kbd> + [ <kbd>←</kbd> / <kbd>→</kbd> ] | 行頭 / 行末へ
+| <kbd>英数</kbd> + [ <kbd>I</kbd> / <kbd>J</kbd> / <kbd>K</kbd> / <kbd>L</kbd> ] | <kbd>Shift</kbd> + [ <kbd>↑</kbd> / <kbd>←</kbd> / <kbd>↓</kbd> / <kbd>→</kbd> ] | 選択
+| <kbd>英数</kbd> + [ <kbd>H</kbd> / <kbd>N</kbd> ] | <kbd>Delete</kbd> / <kbd>Fn</kbd> + <kbd>Delete</kbd> | 後方 / 前方削除
+
+### 特殊な編集操作
+特定のエディター上でのみ有効な編集操作です。現在サポートしているエディターは以下です。
+
++ Atom
++ Eclipse
+
+いずれのエディターもデフォルトのショートカットキー設定である必要があります。
+
+| 入力キー | 実行内容
+|:--|:--
+| <kbd>英数</kbd> + <kbd>Return</kbd> | 下に新しい行を挿入
+| <kbd>英数</kbd> + <kbd>M</kbd> | 行を削除
+| <kbd>英数</kbd> + [ <kbd>,</kbd> / <kbd>.</kbd> ] | 行を上 / 下に移動
+
 
 ### ThumbSense 拡張機能
 
 | 入力キー | 実行内容
 |:--|:--
-| タッチ + [ <kbd>M</kbd>, <kbd>I</kbd> ] | タブを閉じる, 開く
-| タッチ + [ <kbd>U</kbd>, <kbd>O</kbd> ] | 前, 次のタブへ
+| タッチ + [ <kbd>M</kbd> / <kbd>I</kbd> ] | タブを閉じる / 開く
+| タッチ + [ <kbd>U</kbd> / <kbd>O</kbd> ] | 前 / 次のタブへ
 
 ---
 
