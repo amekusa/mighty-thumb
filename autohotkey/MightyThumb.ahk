@@ -69,11 +69,11 @@ vk1D & `;::Send, {Space}
 vk1D & o::Send, {Tab}
 vk1D & u::Send, +{Tab}
 
-; ### Extra Operations
-vk1D & m::EditText(0)     ; Drop the current line
-vk1D & Enter::EditText(1) ; Insert a new line below
-vk1D & ,::EditText(2)     ; Swap the current line with the above
-vk1D & .::EditText(3)     ; Swap the current line with the below
+; ### Complex Operations
+vk1D & m::EditText(0)     ; Delete line
+vk1D & Enter::EditText(1) ; New line below
+vk1D & ,::EditText(2)     ; Move line up
+vk1D & .::EditText(3)     ; Move line down
 
 
 ; ## Mighty Lefty
