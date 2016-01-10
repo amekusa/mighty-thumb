@@ -3,49 +3,44 @@
 ; This is a script for AutoHotKey (http://www.autohotkey.com/) available on Windows.
 ; Author: amekusa <post@amekusa.com>
 
-IsMaximized(hwnd) {
-	WinGet, _x, MinMax, ahk_id %hwnd%
-	Return _x == 1
+IsMaximized(Wn) {
+	WinGet, r, MinMax, ahk_id %Wn%
+	Return r == 1
 }
 
-IsAlwaysOnTop(hwnd) {
-	WinGet, _x, ExStyle, ahk_id %hwnd%
-	Return _x & 0x8 ; NOTE: 0x8 is defined as WS_EX_TOPMOST.
+IsAlwaysOnTop(Wn) {
+	WinGet, r, ExStyle, ahk_id %Wn%
+	Return r & 0x8 ; NOTE: 0x8 is defined as WS_EX_TOPMOST.
 }
 
-; No impl.
-IsFullScreen(hwnd) {
+; XXX No impl.
+IsFullScreen(Wn) {
 }
 
-IsDialogBox(class) {
-	Return class == "#32770"
+IsDialogBox(Cl) {
+	Return Cl == "#32770"
 }
 
-IsPopupMenu(class) {
-	Return class == "#32768"
+IsPopupMenu(Cl) {
+	Return Cl == "#32768"
 }
 
-; Task Manager
-IsTaskManager(proc, class) {
-	Return proc == "taskmgr.exe" && class == "#32770"
-}
-
-; Mozilla Firefox
-IsFirefox(proc, class) {
-	Return class == "MozillaUIWindowClass"
+; Atom
+IsAtom(Pr, Cl) {
+	Return Pr == "atom.exe"
 }
 
 ; Eclipse IDE
-IsEclipse(proc, class) {
-	Return proc == "eclipse.exe" && class == "SWT_Window0"
+IsEclipse(Pr, Cl) {
+	Return Pr == "eclipse.exe" && Cl == "SWT_Window0"
 }
 
-; SonicStage
-IsSonicStage(proc, class) {
-	Return proc == "Omgjbox.exe"
+; Mozilla Firefox
+IsFirefox(Pr, Cl) {
+	Return Pr == "firefox.exe"
 }
 
-; Avira Antivir Ads
-IsAviraAVAds(proc, class) {
-	Return proc == "avnotify.exe" && class == "#32770"
+; Task Manager
+IsTaskManager(Pr, Cl) {
+	Return Pr == "taskmgr.exe"
 }
