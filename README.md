@@ -60,10 +60,16 @@
 | <kbd>英数</kbd> + [ <kbd>,</kbd> / <kbd>.</kbd> ] | 行を上 / 下に移動
 
 
-### ThumbSense 拡張機能
+### トラックパッド連携機能 (OS X のみ)
+トラックパッドにタッチしている間だけ有効になるキーリマップです。  
+Karabiner の multi-touch extension を起動した上で、  
+ターゲット設定の `notsave.thumbsense` を `notsave.mightythumbsense` と書き換えてください。
 
 | 入力キー | 実行内容
 |:--|:--
+| タッチ + <kbd>J</kbd> | 左クリック
+| タッチ + <kbd>K</kbd> | 右クリック
+| タッチ + <kbd>L</kbd> | ホイールボタン
 | タッチ + [ <kbd>M</kbd> / <kbd>I</kbd> ] | タブを閉じる / 開く
 | タッチ + [ <kbd>U</kbd> / <kbd>O</kbd> ] | 前 / 次のタブへ
 
