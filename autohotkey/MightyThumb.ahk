@@ -75,10 +75,6 @@ vk1D & ,::EditText(2)     ; Move line up
 vk1D & .::EditText(3)     ; Move line down
 
 
-; ## Left Hand
-#a::AppsKey      ; Win + A = Context menu
-
-
 ; ## System Control
 
 ; ### IME
@@ -86,8 +82,7 @@ vk1D::IME_OFF("A") ; NFER key = Turn IME Off
 vk1C::IME_ON("A")  ; XFER key = Turn IME On
 
 ; ### GUI windows
-<#c::WinClose, A
-<#v::WinMinimize, A
+vk1D & Escape::WinClose, A ; Close active window
 
 ; ### GUI tabs
 ; Go to the previous tab
