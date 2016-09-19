@@ -78,8 +78,8 @@ vk1D & .::EditText(3)     ; Move line down
 ; ## System Control
 
 ; ### IME
-vk1D::IME_OFF("A") ; NFER key = Turn IME Off
-vk1C::IME_ON("A")  ; XFER key = Turn IME On
+vk1D::IME_OFF("A") ; EISU = Turn IME Off
+vk1C::IME_ON("A")  ; KANA = Turn IME On
 
 ; ### GUI windows
 vk1D & Escape::WinClose, A ; Close active window
