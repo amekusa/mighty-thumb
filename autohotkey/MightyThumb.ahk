@@ -33,7 +33,6 @@ vk1D & c::Send, ^c
 vk1D & x::Send, ^x
 vk1D & v::
 Send, ^v
-;Goto, ~^v ; (What for?)
 Return
 vk1D & z::Send, ^z
 
@@ -129,25 +128,6 @@ vk1D & 4::ControlPlayer(3) ; Go to the next track
 vk1D & 8::ControlPlayer(4) ; Go to the previous playlist or album
 vk1D & 9::ControlPlayer(5) ; Go to the next playlist or album
 vk1D & 0::ControlPlayer(6) ; Widgetize the player
-
-; ### Control the sound driver (Not working on Vista+)
-; Volume down
-;vk1D & F1::
-;^,::
-;ControlSound(0)
-;Return
-
-; Volume up
-;vk1D & F2::
-;^.::
-;ControlSound(1)
-;Return
-
-; Mute
-;vk1D & F3::
-;^m::
-;ControlSound(2)
-;Return
 
 
 ; //////// AHK Directives (Do not edit) ////////
