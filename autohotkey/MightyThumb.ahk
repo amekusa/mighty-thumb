@@ -75,15 +75,13 @@ vk1D & ,::EditText(2)     ; Move line up
 vk1D & .::EditText(3)     ; Move line down
 
 
-; ## Mighty Lefty
-CapsLock::Enter  ; CapsLock = Enter
+; ## Left Hand
 #a::AppsKey      ; Win + A = Context menu
 
 
 ; ## System Control
 
 ; ### IME
-; Toggle method sucks
 vk1D::IME_OFF("A") ; NFER key = Turn IME Off
 vk1C::IME_ON("A")  ; XFER key = Turn IME On
 
