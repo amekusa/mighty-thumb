@@ -33,7 +33,6 @@ vk1D & c::Send, ^c
 vk1D & x::Send, ^x
 vk1D & v::
 Send, ^v
-;Goto, ~^v ; (What for?)
 Return
 vk1D & z::Send, ^z
 
@@ -76,21 +75,14 @@ vk1D & ,::EditText(2)     ; Move line up
 vk1D & .::EditText(3)     ; Move line down
 
 
-; ## Mighty Lefty
-CapsLock::Enter  ; CapsLock = Enter
-#a::AppsKey      ; Win + A = Context menu
-
-
 ; ## System Control
 
 ; ### IME
-; Toggle method sucks
-vk1D::IME_OFF("A") ; NFER key = Turn IME Off
-vk1C::IME_ON("A")  ; XFER key = Turn IME On
+vk1D::SetImeState("A", 0) ; EISU = Turn IME off
+vk1C::SetImeState("A", 1) ; KANA = Turn IME on
 
 ; ### GUI windows
-<#c::WinClose, A
-<#v::WinMinimize, A
+vk1D & Escape::WinClose, A ; Close active window
 
 ; ### GUI tabs
 ; Go to the previous tab
@@ -129,25 +121,6 @@ vk1D & 4::ControlPlayer(3) ; Go to the next track
 vk1D & 8::ControlPlayer(4) ; Go to the previous playlist or album
 vk1D & 9::ControlPlayer(5) ; Go to the next playlist or album
 vk1D & 0::ControlPlayer(6) ; Widgetize the player
-
-; ### Control the sound driver (Not working on Vista+)
-; Volume down
-;vk1D & F1::
-;^,::
-;ControlSound(0)
-;Return
-
-; Volume up
-;vk1D & F2::
-;^.::
-;ControlSound(1)
-;Return
-
-; Mute
-;vk1D & F3::
-;^m::
-;ControlSound(2)
-;Return
 
 
 ; //////// AHK Directives (Do not edit) ////////
