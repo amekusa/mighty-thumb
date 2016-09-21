@@ -78,8 +78,8 @@ vk1D & .::EditText(3)     ; Move line down
 ; ## System Control
 
 ; ### IME
-vk1D::IME_OFF("A") ; EISU = Turn IME Off
-vk1C::IME_ON("A")  ; KANA = Turn IME On
+vk1D::SetImeState("A", 0) ; EISU = Turn IME off
+vk1C::SetImeState("A", 1) ; KANA = Turn IME on
 
 ; ### GUI windows
 vk1D & Escape::WinClose, A ; Close active window
