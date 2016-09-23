@@ -69,6 +69,9 @@ vk1D & 2::ControlTab(0) ; Thumb + 2 = Previous tab
 vk1D & 3::ControlTab(1) ; Thumb + 3 = Next tab
 vk1D & 4::ControlTab(3) ; Thumb + 4 = New tab
 
+; ## Special keys
+vk1D & Tab::Send, {Return} ; Thumb + Tab = Return
+
 ; //////// AHK Directives (Do not edit) ////////
 #NoEnv
 #SingleInstance Force
