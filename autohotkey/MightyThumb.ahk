@@ -12,116 +12,62 @@ SendMode Event
 SetWorkingDir %A_ScriptDir%
 Return
 
-
 ; ## Cursor
-; Thumb + E/S/D/F = Up/Left/Down/Right
-vk1D & e::Send, {Up}
-vk1D & s::Send, {Left}
-vk1D & d::Send, {Down}
-vk1D & f::Send, {Right}
-
+vk1D & e::Send, {Up}    ; Thumb + E = Up
+vk1D & s::Send, {Left}  ; Thumb + S = Left
+vk1D & d::Send, {Down}  ; Thumb + D = Down
+vk1D & f::Send, {Right} ; Thumb + F = Right
 
 ; ## View
-; Thumb + W/R = Page Up/Down
-vk1D & w::Send, {PgUp}
-vk1D & r::Send, {PgDn}
-
+vk1D & w::Send, {PgUp} ; Thumb + W = Page Up
+vk1D & r::Send, {PgDn} ; Thumb + R = Page Down
 
 ; ## Edit
-; Thumb + C/X/V/Z = Copy/Cut/Paste/Undo
-vk1D & c::Send, ^c
-vk1D & x::Send, ^x
-vk1D & v::
-Send, ^v
-Return
-vk1D & z::Send, ^z
+vk1D & c::Send, ^c ; Thumb + C = Copy
+vk1D & x::Send, ^x ; Thumb + X = Cut
+vk1D & v::Send, ^v ; Thumb + V = Paste
+vk1D & z::Send, ^z ; Thumb + Z = Undo
 
-; ### Carriage
-; Thumb + A/G = Previous/Next word
-vk1D & a::Send, ^{Left}  ; Ctrl + Left
-vk1D & g::Send, ^{Right} ; Ctrl + Right
+; ## Carriage
+vk1D & a::Send, ^{Left}  ; Thumb + A = Previous word
+vk1D & g::Send, ^{Right} ; Thumb + G = Next word
+vk1D & q::Send, {Home}   ; Thumb + Q = Beginning of line
+vk1D & t::Send, {End}    ; Thumb + T = End of line
 
-; Thumb + Q/T = Beginning/End of line
-vk1D & q::Send, {Home}
-vk1D & t::Send, {End}
+; ## Select
+vk1D & j::Send, +{Left}                  ; Thumb + J = Shift + Left
+vk1D & l::Send, +{Right}                 ; Thumb + L = Shift + Right
+vk1D & i::Send, +{Up}                    ; Thumb + I = Shift + Up
+vk1D & k::Send, +{Down}                  ; Thumb + K = Shift + Down
+vk1D & p::Send, {End}{Home}{Home}+{Down} ; Thumb + P = Select the current line
 
-; ### Select
-; Thumb + U/H/K/L = Shift + Up/Left/Down/Right
-vk1D & j::Send, +{Left}
-vk1D & l::Send, +{Right}
-vk1D & i::Send, +{Up}
-vk1D & k::Send, +{Down}
+; ## Delete
+vk1D & h::Send, {BS}     ; Thumb + H = Backward delete
+vk1D & n::Send, {Delete} ; Thumb + N = Forward delete
 
-; Thumb + P = Select the current line
-vk1D & p::Send, {End}{Home}{Home}+{Down}
+; ## Spacing
+vk1D & `;::Send, {Space} ; Thumb + ; = Space
+vk1D & o::Send, {Tab}    ; Thumb + O = Tab       (Indent)
+vk1D & u::Send, +{Tab}   ; Thumb + U = Shift+Tab (Unindent)
 
-; ### Delete
-; Thumb + H/N = Backward/Forward delete
-vk1D & n::Send, {Delete}
-vk1D & h::Send, {BS}
+; ## Complex Operations
+vk1D & m::EditText(0)     ; Thumb + M     = Delete line
+vk1D & Enter::EditText(1) ; Thumb + Enter = New line below
+vk1D & ,::EditText(2)     ; Thumb + ,     = Move line up
+vk1D & .::EditText(3)     ; Thumb + .     = Move line down
 
-; ### Spacing
-; Thumb + ; = Space
-vk1D & `;::Send, {Space}
+; ## IME
+vk1D::SetImeState("A", 0) ; Thumb    = Turn IME off
+vk1C::SetImeState("A", 1) ; Thumb(R) = Turn IME on
 
-; Thumb + O/U = Tab/Shift+Tab (Indent/Unindent)
-vk1D & o::Send, {Tab}
-vk1D & u::Send, +{Tab}
+; ## GUI windows
+vk1D & Escape::WinClose, A ; Thumb + Esc = Close active window
 
-; ### Complex Operations
-vk1D & m::EditText(0)     ; Delete line
-vk1D & Enter::EditText(1) ; New line below
-vk1D & ,::EditText(2)     ; Move line up
-vk1D & .::EditText(3)     ; Move line down
-
-
-; ## System Control
-
-; ### IME
-vk1D::SetImeState("A", 0) ; EISU = Turn IME off
-vk1C::SetImeState("A", 1) ; KANA = Turn IME on
-
-; ### GUI windows
-vk1D & Escape::WinClose, A ; Close active window
-
-; ### GUI tabs
-; Go to the previous tab
-#u::
-#w::
-ControlTab(0)
-Return
-
-; Go to the next tab
-#o::
-#r::
-ControlTab(1)
-Return
-
-; Close the current tab
-#m::
-#d::
-ControlTab(2)
-Return
-
-; Create a new tab
-#i::
-#e::
-ControlTab(3)
-Return
-
-; Browsing Operations
-#s::ControlBrowser(0) ; Go to the previous page
-#f::ControlBrowser(1) ; Go to the next page
-
-; Media players
-vk1D & 1::ControlPlayer(0) ; Play/Pause
-vk1D & 2::ControlPlayer(1) ; Stop
-vk1D & 3::ControlPlayer(2) ; Go to the previous track
-vk1D & 4::ControlPlayer(3) ; Go to the next track
-vk1D & 8::ControlPlayer(4) ; Go to the previous playlist or album
-vk1D & 9::ControlPlayer(5) ; Go to the next playlist or album
-vk1D & 0::ControlPlayer(6) ; Widgetize the player
-
+; ## GUI tabs
+vk1D & 1::ControlTab(2) ; Thumb + 1 = Close tab
+vk1D & 2::ControlTab(0) ; Thumb + 2 = Previous tab
+vk1D & 3::ControlTab(1) ; Thumb + 3 = Next tab
+vk1D & 4::ControlTab(3) ; Thumb + 4 = New tab
 
 ; //////// AHK Directives (Do not edit) ////////
 #NoEnv
