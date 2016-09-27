@@ -214,7 +214,6 @@
           <not>Eclipse</not>
           <autogen>__KeyToKey__ KeyCode::U, KeyCode::TAB, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L</autogen>
           <autogen>__KeyToKey__ KeyCode::O, KeyCode::TAB, ModifierFlag::CONTROL_L</autogen>
-          <autogen>__KeyToKey__ KeyCode::N, KeyCode::VK_MOUSEKEY_BUTTON_MIDDLE</autogen>
         </block>
         <block>
           <only>Eclipse</only>
