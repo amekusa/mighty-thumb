@@ -72,19 +72,21 @@ vk1D & 4::ControlTab(3) ; Thumb + 4 = New tab
 ; ## Special keys
 vk1D & Tab::Send, {Return} ; Thumb + Tab = Return
 
-; ## 10 key
-vk1C & n::Send, {Numpad1}    ; Thumb(R) + N = 1
-vk1C & m::Send, {Numpad2}    ; Thumb(R) + M = 2
-vk1C & ,::Send, {Numpad3}    ; Thumb(R) + , = 3
-vk1C & .::Send, {Numpad0}    ; Thumb(R) + . = 0
-vk1C & j::Send, {Numpad4}    ; Thumb(R) + J = 4
-vk1C & k::Send, {Numpad5}    ; Thumb(R) + K = 5
-vk1C & l::Send, {Numpad6}    ; Thumb(R) + L = 6
-vk1C & `;::Send, {NumpadAdd} ; Thumb(R) + ; = [+]
-vk1C & u::Send, {Numpad7}    ; Thumb(R) + U = 7
-vk1C & i::Send, {Numpad8}    ; Thumb(R) + I = 8
-vk1C & o::Send, {Numpad9}    ; Thumb(R) + O = 9
-vk1C & p::Send, {NumpadSub}  ; Thumb(R) + P = [-]
+; ## Numpad
+vk1C & Space::Send, {Numpad0} ; Thumb(R) + Space = 0
+vk1C & n::Send, {Numpad1}     ; Thumb(R) + N     = 1
+vk1C & m::Send, {Numpad2}     ; Thumb(R) + M     = 2
+vk1C & ,::Send, {Numpad3}     ; Thumb(R) + ,     = 3
+vk1C & j::Send, {Numpad4}     ; Thumb(R) + J     = 4
+vk1C & k::Send, {Numpad5}     ; Thumb(R) + K     = 5
+vk1C & l::Send, {Numpad6}     ; Thumb(R) + L     = 6
+vk1C & u::Send, {Numpad7}     ; Thumb(R) + U     = 7
+vk1C & i::Send, {Numpad8}     ; Thumb(R) + I     = 8
+vk1C & o::Send, {Numpad9}     ; Thumb(R) + O     = 9
+vk1C & .::Send, {NumpadEnter} ; Thumb(R) + .     = Enter
+vk1C & `;::Send, {NumpadAdd}  ; Thumb(R) + ;     = [+]
+vk1C & p::Send, {NumpadSub}   ; Thumb(R) + P     = [-]
+vk1C & h::Send, {BS}          ; Thumb(R) + H     = Backspace
 
 ; //////// AHK Directives (Do not edit) ////////
 #NoEnv
