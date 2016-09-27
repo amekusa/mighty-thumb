@@ -201,15 +201,15 @@
       </item>
       <item>
         <config_only>notsave.mightythumbsense</config_only>
-        <name>Touch + M/I = Close/New Window</name>
-        <identifier>remap.amekusa.mightythumb.touch.window</identifier>
+        <name>Touch + M/I = Close/New Tab</name>
+        <identifier>remap.amekusa.mightythumb.touch.tabs</identifier>
         <autogen>__KeyToKey__ KeyCode::M, KeyCode::W, ModifierFlag::COMMAND_L</autogen>
         <autogen>__KeyToKey__ KeyCode::I, KeyCode::T, ModifierFlag::COMMAND_L</autogen>
       </item>
       <item>
         <config_only>notsave.mightythumbsense</config_only>
-        <name>Touch + U/O = Previous/Next Window</name>
-        <identifier>remap.amekusa.mightythumb.touch.window.switch</identifier>
+        <name>Touch + U/O = Previous/Next Tab</name>
+        <identifier>remap.amekusa.mightythumb.touch.tabs.switch</identifier>
         <block>
           <not>Eclipse</not>
           <autogen>__KeyToKey__ KeyCode::U, KeyCode::TAB, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L</autogen>
