@@ -176,6 +176,25 @@
       </item>
     </item>
     <item>
+      <name>Numpad</name>
+      <identifier>remap.amekusa.mightythumb.numpad</identifier>
+      <autogen>__KeyOverlaidModifier__ KeyCode::JIS_KANA, KeyCode::VK_MODIFIER_EXTRA2, KeyCode::JIS_KANA</autogen>
+      <autogen>__KeyToKey__ KeyCode::SPACE,     ModifierFlag::EXTRA2, KeyCode::KEYPAD_0</autogen>
+      <autogen>__KeyToKey__ KeyCode::N,         ModifierFlag::EXTRA2, KeyCode::KEYPAD_1</autogen>
+      <autogen>__KeyToKey__ KeyCode::M,         ModifierFlag::EXTRA2, KeyCode::KEYPAD_2</autogen>
+      <autogen>__KeyToKey__ KeyCode::COMMA,     ModifierFlag::EXTRA2, KeyCode::KEYPAD_3</autogen>
+      <autogen>__KeyToKey__ KeyCode::J,         ModifierFlag::EXTRA2, KeyCode::KEYPAD_4</autogen>
+      <autogen>__KeyToKey__ KeyCode::K,         ModifierFlag::EXTRA2, KeyCode::KEYPAD_5</autogen>
+      <autogen>__KeyToKey__ KeyCode::L,         ModifierFlag::EXTRA2, KeyCode::KEYPAD_6</autogen>
+      <autogen>__KeyToKey__ KeyCode::U,         ModifierFlag::EXTRA2, KeyCode::KEYPAD_7</autogen>
+      <autogen>__KeyToKey__ KeyCode::I,         ModifierFlag::EXTRA2, KeyCode::KEYPAD_8</autogen>
+      <autogen>__KeyToKey__ KeyCode::O,         ModifierFlag::EXTRA2, KeyCode::KEYPAD_9</autogen>
+      <autogen>__KeyToKey__ KeyCode::DOT,       ModifierFlag::EXTRA2, KeyCode::ENTER</autogen>
+      <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::EXTRA2, KeyCode::KEYPAD_PLUS</autogen>
+      <autogen>__KeyToKey__ KeyCode::P,         ModifierFlag::EXTRA2, KeyCode::KEYPAD_MINUS</autogen>
+      <autogen>__KeyToKey__ KeyCode::H,         ModifierFlag::EXTRA2, KeyCode::DELETE</autogen>
+    </item>
+    <item>
       <name>ThumbSense Combination</name>
       <item>
         <name>Karabiner multi-touch extension must be enabled.</name>
