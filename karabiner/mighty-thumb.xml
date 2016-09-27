@@ -2,9 +2,6 @@
 <root>
   <item>
     <name>Mighty Thumb</name>
-    <item>
-      <name>Turn your thumb key into an extra modifier key.</name>
-    </item>
     <appdef>
       <appname>Atom</appname>
       <equal>com.github.atom</equal>
