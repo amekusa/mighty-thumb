@@ -20,7 +20,7 @@
     </appdef>
     <item>
       <name>Thumb + E/S/D/F = Up/Left/Down/Right</name>
-      <identifier>remap.amekusa.mightythumb.cursor</identifier>
+      <identifier>remap.mightythumb.cursor</identifier>
       <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
       <autogen>__KeyToKey__ KeyCode::E, ModifierFlag::EXTRA1, KeyCode::CURSOR_UP</autogen>
       <autogen>__KeyToKey__ KeyCode::S, ModifierFlag::EXTRA1, KeyCode::CURSOR_LEFT</autogen>
@@ -29,21 +29,21 @@
     </item>
     <item>
       <name>Thumb + O/U = Tab/Shift+Tab</name>
-      <identifier>remap.amekusa.mightythumb.tab</identifier>
+      <identifier>remap.mightythumb.tab</identifier>
       <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
       <autogen>__KeyToKey__ KeyCode::U, ModifierFlag::EXTRA1, KeyCode::TAB, ModifierFlag::SHIFT_L</autogen>
       <autogen>__KeyToKey__ KeyCode::O, ModifierFlag::EXTRA1, KeyCode::TAB</autogen>
     </item>
     <item>
       <name>Thumb + W/R = Page Up/Down</name>
-      <identifier>remap.amekusa.mightythumb.view.page</identifier>
+      <identifier>remap.mightythumb.view.page</identifier>
       <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
       <autogen>__KeyToKey__ KeyCode::W, ModifierFlag::EXTRA1, KeyCode::CURSOR_UP, ModifierFlag::FN</autogen>
       <autogen>__KeyToKey__ KeyCode::R, ModifierFlag::EXTRA1, KeyCode::CURSOR_DOWN, ModifierFlag::FN</autogen>
     </item>
     <item>
       <name>Thumb + C/X/V/Z = Copy/Cut/Paste/Undo</name>
-      <identifier>remap.amekusa.mightythumb.edit</identifier>
+      <identifier>remap.mightythumb.edit</identifier>
       <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
       <autogen>__KeyToKey__ KeyCode::C, ModifierFlag::EXTRA1, KeyCode::C, ModifierFlag::COMMAND_L</autogen>
       <autogen>__KeyToKey__ KeyCode::X, ModifierFlag::EXTRA1, KeyCode::X, ModifierFlag::COMMAND_L</autogen>
@@ -52,21 +52,21 @@
     </item>
     <item>
       <name>Thumb + A/G = Previous/Next Word</name>
-      <identifier>remap.amekusa.mightythumb.edit.cursor.word</identifier>
+      <identifier>remap.mightythumb.edit.cursor.word</identifier>
       <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
       <autogen>__KeyToKey__ KeyCode::A, ModifierFlag::EXTRA1, KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L</autogen>
       <autogen>__KeyToKey__ KeyCode::G, ModifierFlag::EXTRA1, KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L</autogen>
     </item>
     <item>
       <name>Thumb + Q/T = Beginning/End of Line</name>
-      <identifier>remap.amekusa.mightythumb.edit.cursor.line</identifier>
+      <identifier>remap.mightythumb.edit.cursor.line</identifier>
       <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
       <autogen>__KeyToKey__ KeyCode::Q, ModifierFlag::EXTRA1, KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L</autogen>
       <autogen>__KeyToKey__ KeyCode::T, ModifierFlag::EXTRA1, KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L</autogen>
     </item>
     <item>
       <name>Thumb + U/H/K/L = Shift + Up/Left/Down/Right</name>
-      <identifier>remap.amekusa.mightythumb.edit.select</identifier>
+      <identifier>remap.mightythumb.edit.select</identifier>
       <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
       <autogen>__KeyToKey__ KeyCode::I, ModifierFlag::EXTRA1, KeyCode::CURSOR_UP, ModifierFlag::SHIFT_L</autogen>
       <autogen>__KeyToKey__ KeyCode::J, ModifierFlag::EXTRA1, KeyCode::CURSOR_LEFT, ModifierFlag::SHIFT_L</autogen>
@@ -75,32 +75,32 @@
     </item>
     <item>
       <name>Thumb + H/N = Backward/Forward Delete</name>
-      <identifier>remap.amekusa.mightythumb.edit.delete</identifier>
+      <identifier>remap.mightythumb.edit.delete</identifier>
       <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
       <autogen>__KeyToKey__ KeyCode::H, ModifierFlag::EXTRA1, KeyCode::DELETE</autogen>
       <autogen>__KeyToKey__ KeyCode::N, ModifierFlag::EXTRA1, KeyCode::DELETE, ModifierFlag::FN</autogen>
     </item>
     <item>
       <name>Thumb + ; = Space</name>
-      <identifier>remap.amekusa.mightythumb.space</identifier>
+      <identifier>remap.mightythumb.space</identifier>
       <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
       <autogen>__KeyToKey__ KeyCode::SEMICOLON, ModifierFlag::EXTRA1, KeyCode::SPACE</autogen>
     </item>
     <item>
       <name>Thumb + Tab = Return</name>
-      <identifier>remap.amekusa.mightythumb.return</identifier>
+      <identifier>remap.mightythumb.return</identifier>
       <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
       <autogen>__KeyToKey__ KeyCode::TAB, ModifierFlag::EXTRA1, KeyCode::RETURN</autogen>
     </item>
     <item>
       <name>Thumb + Esc = Quit</name>
-      <identifier>remap.amekusa.mightythumb.quit</identifier>
+      <identifier>remap.mightythumb.quit</identifier>
       <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
       <autogen>__KeyToKey__ KeyCode::ESCAPE, ModifierFlag::EXTRA1, KeyCode::Q, ModifierFlag::COMMAND_L</autogen>
     </item>
     <item>
       <name>Thumb + 1/4 = Close/New Tab</name>
-      <identifier>remap.amekusa.mightythumb.tabs</identifier>
+      <identifier>remap.mightythumb.tabs</identifier>
       <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
       <block>
         <not>Atom</not>
@@ -115,7 +115,7 @@
     </item>
     <item>
       <name>Thumb + 2/3 = Previous/Next Tab</name>
-      <identifier>remap.amekusa.mightythumb.tabs.switch</identifier>
+      <identifier>remap.mightythumb.tabs.switch</identifier>
       <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
       <block>
         <not>Eclipse</not>
@@ -130,7 +130,7 @@
     </item>
     <item>
       <name>Numpad</name>
-      <identifier>remap.amekusa.mightythumb.numpad</identifier>
+      <identifier>remap.mightythumb.numpad</identifier>
       <autogen>__KeyOverlaidModifier__ KeyCode::JIS_KANA, KeyCode::VK_MODIFIER_EXTRA2, KeyCode::JIS_KANA</autogen>
       <autogen>__KeyToKey__ KeyCode::SPACE,     ModifierFlag::EXTRA2, KeyCode::KEYPAD_0</autogen>
       <autogen>__KeyToKey__ KeyCode::N,         ModifierFlag::EXTRA2, KeyCode::KEYPAD_1</autogen>
@@ -154,7 +154,7 @@
       </item>
       <item>
         <name>Thumb + M = Delete Line</name>
-        <identifier>remap.amekusa.mightythumb.edit.delete.line</identifier>
+        <identifier>remap.mightythumb.edit.delete.line</identifier>
         <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
         <block>
           <only>Atom</only>
@@ -167,7 +167,7 @@
       </item>
       <item>
         <name>Thumb + &lt;/&gt; = Move Line Up/Down</name>
-        <identifier>remap.amekusa.mightythumb.edit.move.line</identifier>
+        <identifier>remap.mightythumb.edit.move.line</identifier>
         <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
         <block>
           <only>Atom</only>
@@ -182,7 +182,7 @@
       </item>
       <item>
         <name>Thumb + Return = New Line Below</name>
-        <identifier>remap.amekusa.mightythumb.edit.newline</identifier>
+        <identifier>remap.mightythumb.edit.newline</identifier>
         <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
         <block>
           <only>Atom</only>
@@ -203,32 +203,32 @@
       <item>
         <config_only>notsave.mightythumbsense</config_only>
         <name>Touch + J = Left Mouse Button</name>
-        <identifier>remap.amekusa.mightythumb.touch.mouse.button.l</identifier>
+        <identifier>remap.mightythumb.touch.mouse.button.l</identifier>
         <autogen>__KeyToKey__ KeyCode::J, PointingButton::LEFT</autogen>
       </item>
       <item>
         <config_only>notsave.mightythumbsense</config_only>
         <name>Touch + K = Right Mouse Button</name>
-        <identifier>remap.amekusa.mightythumb.touch.mouse.button.r</identifier>
+        <identifier>remap.mightythumb.touch.mouse.button.r</identifier>
         <autogen>__KeyToKey__ KeyCode::K, PointingButton::RIGHT</autogen>
       </item>
       <item>
         <config_only>notsave.mightythumbsense</config_only>
         <name>Touch + L = Mouse Wheel Button</name>
-        <identifier>remap.amekusa.mightythumb.touch.mouse.button.wheel</identifier>
+        <identifier>remap.mightythumb.touch.mouse.button.wheel</identifier>
         <autogen>__KeyToKey__ KeyCode::L, PointingButton::MIDDLE</autogen>
       </item>
       <item>
         <config_only>notsave.mightythumbsense</config_only>
         <name>Touch + M/I = Close/New Tab</name>
-        <identifier>remap.amekusa.mightythumb.touch.tabs</identifier>
+        <identifier>remap.mightythumb.touch.tabs</identifier>
         <autogen>__KeyToKey__ KeyCode::M, KeyCode::W, ModifierFlag::COMMAND_L</autogen>
         <autogen>__KeyToKey__ KeyCode::I, KeyCode::T, ModifierFlag::COMMAND_L</autogen>
       </item>
       <item>
         <config_only>notsave.mightythumbsense</config_only>
         <name>Touch + U/O = Previous/Next Tab</name>
-        <identifier>remap.amekusa.mightythumb.touch.tabs.switch</identifier>
+        <identifier>remap.mightythumb.touch.tabs.switch</identifier>
         <block>
           <not>Eclipse</not>
           <autogen>__KeyToKey__ KeyCode::U, KeyCode::TAB, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L</autogen>
