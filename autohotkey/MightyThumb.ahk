@@ -86,9 +86,9 @@ vk1C & o::Send, {Numpad9}     ; Thumb(R) + O     = 9
 vk1C & .::Send, {NumpadEnter} ; Thumb(R) + .     = Enter
 vk1C & `;::Send, {NumpadAdd}  ; Thumb(R) + ;     = [+]
 vk1C & p::Send, {NumpadSub}   ; Thumb(R) + P     = [-]
-vk1C & h::
-SetImeState("A", 0)           ; Turn IME off
-Send, {BS}                    ; + Thumb(R) + H   = Backspace
+vk1C & h::                    ; Thumb(R) + H
+SetImeState("A", 0)           ; = Turn IME off
+Send, {BS}                    ; + Backspace
 Return
 
 ; //////// AHK Directives (Do not edit) ////////
