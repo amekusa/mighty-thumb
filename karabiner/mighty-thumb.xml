@@ -118,9 +118,15 @@
       <identifier>remap.mightythumb.tabs.switch</identifier>
       <autogen>__KeyOverlaidModifier__ KeyCode::JIS_EISUU, KeyCode::VK_MODIFIER_EXTRA1, KeyCode::JIS_EISUU</autogen>
       <block>
+        <not>Atom</not>
         <not>Eclipse</not>
         <autogen>__KeyToKey__ KeyCode::2, ModifierFlag::EXTRA1, KeyCode::TAB, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L</autogen>
         <autogen>__KeyToKey__ KeyCode::3, ModifierFlag::EXTRA1, KeyCode::TAB, ModifierFlag::CONTROL_L</autogen>
+      </block>
+      <block>
+        <only>Atom</only>
+        <autogen>__KeyToKey__ KeyCode::2, ModifierFlag::EXTRA1, KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::3, ModifierFlag::EXTRA1, KeyCode::BACKSLASH, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
       </block>
       <block>
         <only>Eclipse</only>
@@ -230,9 +236,15 @@
         <name>Touch + U/O = Previous/Next Tab</name>
         <identifier>remap.mightythumb.touch.tabs.switch</identifier>
         <block>
+          <not>Atom</not>
           <not>Eclipse</not>
           <autogen>__KeyToKey__ KeyCode::U, KeyCode::TAB, ModifierFlag::CONTROL_L | ModifierFlag::SHIFT_L</autogen>
           <autogen>__KeyToKey__ KeyCode::O, KeyCode::TAB, ModifierFlag::CONTROL_L</autogen>
+        </block>
+        <block>
+          <only>Atom</only>
+          <autogen>__KeyToKey__ KeyCode::U, KeyCode::BRACKET_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
+          <autogen>__KeyToKey__ KeyCode::O, KeyCode::BACKSLASH, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
         </block>
         <block>
           <only>Eclipse</only>
