@@ -130,8 +130,8 @@
       </block>
       <block>
         <only>Eclipse</only>
-        <autogen>__KeyToKey__ KeyCode::2, KeyCode::PAGEUP, ModifierFlag::CONTROL_L</autogen>
-        <autogen>__KeyToKey__ KeyCode::3, KeyCode::PAGEDOWN, ModifierFlag::CONTROL_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::2, ModifierFlag::EXTRA1, KeyCode::PAGEUP, ModifierFlag::CONTROL_L</autogen>
+        <autogen>__KeyToKey__ KeyCode::3, ModifierFlag::EXTRA1, KeyCode::PAGEDOWN, ModifierFlag::CONTROL_L</autogen>
       </block>
     </item>
     <item>
