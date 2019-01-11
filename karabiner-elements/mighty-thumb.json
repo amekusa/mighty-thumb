@@ -391,6 +391,64 @@
     },
 
     {
+      "description": "英数 + Enter = New Line Below (Atom)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "return_or_enter",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "return_or_enter",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["com.github.atom"]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "description": "英数 + Enter = New Line Below (Eclipse)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "return_or_enter",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "return_or_enter",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["org.eclipse.platform.ide"]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
       "description": "英数 + , / . = Move Line Up / Down (Atom)",
       "manipulators": [
         {
