@@ -685,6 +685,26 @@
           ]
         }
       ]
+    },
+
+    {
+      "description": "[EXTRA] Shift + Space = Underscore",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "mandatory": ["shift"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "international1"
+            }
+          ]
+        }
+      ]
     }
 
   ]
