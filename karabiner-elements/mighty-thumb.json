@@ -647,6 +647,12 @@
                 "shift"
               ]
             }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["org.eclipse.platform.ide"]
+            }
           ]
         },
         {
@@ -663,6 +669,12 @@
               "modifiers": [
                 "control"
               ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["org.eclipse.platform.ide"]
             }
           ]
         }
