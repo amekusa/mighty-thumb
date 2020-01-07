@@ -849,6 +849,226 @@
           ]
         }
       ]
+    },
+
+    {
+      "description": "Touchpad + L = Middle Click (Multitouch-Extension required)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "pointing_button": "button3"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 0
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "description": "Touchpad + U / O = Previous / Next Tab (Multitouch-Extension required)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "u",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": [
+                "control",
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 0
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["org.eclipse.platform.ide"]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "o",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": [
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 0
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["org.eclipse.platform.ide"]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "description": "Touchpad + U / O = Previous / Next Tab (Eclipse) (Multitouch-Extension required)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "u",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "page_up",
+              "modifiers": [
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 0
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["org.eclipse.platform.ide"]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "o",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "page_down",
+              "modifiers": [
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 0
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["org.eclipse.platform.ide"]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "description": "Touchpad + M / I = Close / New Tab (Multitouch-Extension required)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "m",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "w",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "i",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "t",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 0
+            }
+          ]
+        }
+      ]
     }
 
   ]
