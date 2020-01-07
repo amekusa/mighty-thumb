@@ -788,6 +788,16 @@
             {
               "key_code": "international1"
             }
+          ],
+          "conditions": [
+            {
+              "type": "input_source_if",
+              "input_sources": [
+                {
+                  "input_source_id": "com.apple.keylayout.ABC"
+                }
+              ]
+            }
           ]
         }
       ]
