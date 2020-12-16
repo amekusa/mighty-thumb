@@ -1,0 +1,982 @@
+{
+  "title": "Mighty Thumb",
+  "rules": [{
+      "description": "英数 as an extra modifier key (Required)",
+      "manipulators": [{
+        "type": "basic",
+        "from": {
+          "key_code": "japanese_eisuu",
+          "modifiers": {
+            "optional": ["any"]
+          }
+        },
+        "to": [{
+          "key_code": "fn",
+          "lazy": true
+        }],
+        "to_if_alone": [{
+          "key_code": "japanese_eisuu"
+        }]
+      }]
+    },
+
+    {
+      "description": "英数 + E / D / S / F = Up / Down / Left / Right",
+      "manipulators": [{
+          "type": "basic",
+          "from": {
+            "key_code": "e",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "up_arrow"
+          }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "d",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "down_arrow"
+          }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "s",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "left_arrow"
+          }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "f",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "right_arrow"
+          }]
+        }
+      ]
+    },
+
+    {
+      "description": "英数 + W / R = Page Up / Down",
+      "manipulators": [{
+          "type": "basic",
+          "from": {
+            "key_code": "w",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "page_up"
+          }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "r",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "page_down"
+          }]
+        }
+      ]
+    },
+
+    {
+      "description": "英数 + A / G = Previous / Next Word",
+      "manipulators": [{
+          "type": "basic",
+          "from": {
+            "key_code": "a",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "left_arrow",
+            "modifiers": ["option"]
+          }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "g",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "right_arrow",
+            "modifiers": ["option"]
+          }]
+        }
+      ]
+    },
+
+    {
+      "description": "英数 + Q / T = Beginning / End of Line",
+      "manipulators": [{
+          "type": "basic",
+          "from": {
+            "key_code": "q",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "left_arrow",
+            "modifiers": ["command"]
+          }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "t",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "right_arrow",
+            "modifiers": ["command"]
+          }]
+        }
+      ]
+    },
+
+    {
+      "description": "英数 + I / K / J / L = Select Text",
+      "manipulators": [{
+          "type": "basic",
+          "from": {
+            "key_code": "i",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "up_arrow",
+            "modifiers": ["shift"]
+          }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "down_arrow",
+            "modifiers": ["shift"]
+          }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "left_arrow",
+            "modifiers": ["shift"]
+          }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "right_arrow",
+            "modifiers": ["shift"]
+          }]
+        }
+      ]
+    },
+
+    {
+      "description": "英数 + U / O = Unindent / Indent",
+      "manipulators": [{
+          "type": "basic",
+          "from": {
+            "key_code": "u",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "tab",
+            "modifiers": ["shift"]
+          }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "o",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "tab"
+          }]
+        }
+      ]
+    },
+
+    {
+      "description": "英数 + H / N = Backward / Forward Delete",
+      "manipulators": [{
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "delete_or_backspace"
+          }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "n",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "delete_or_backspace",
+            "modifiers": ["fn"]
+          }]
+        }
+      ]
+    },
+
+    {
+      "description": "英数 + Z / X / C / V = Undo / Cut / Copy / Paste",
+      "manipulators": [{
+          "type": "basic",
+          "from": {
+            "key_code": "z",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "z",
+            "modifiers": [
+              "command"
+            ]
+          }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "x",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "x",
+            "modifiers": [
+              "command"
+            ]
+          }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "c",
+            "modifiers": [
+              "command"
+            ]
+          }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "v",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "v",
+            "modifiers": [
+              "command"
+            ]
+          }]
+        }
+      ]
+    },
+
+    {
+      "description": "英数 + M = Delete Line (Atom)",
+      "manipulators": [{
+        "type": "basic",
+        "from": {
+          "key_code": "m",
+          "modifiers": {
+            "mandatory": ["fn"]
+          }
+        },
+        "to": [{
+          "key_code": "k",
+          "modifiers": [
+            "control",
+            "shift"
+          ]
+        }],
+        "conditions": [{
+          "type": "frontmost_application_if",
+          "bundle_identifiers": ["com.github.atom"]
+        }]
+      }]
+    },
+
+    {
+      "description": "英数 + M = Delete Line (VSCode)",
+      "manipulators": [{
+        "type": "basic",
+        "from": {
+          "key_code": "m",
+          "modifiers": {
+            "mandatory": ["fn"]
+          }
+        },
+        "to": [{
+          "key_code": "k",
+          "modifiers": [
+            "command",
+            "shift"
+          ]
+        }],
+        "conditions": [{
+          "type": "frontmost_application_if",
+          "bundle_identifiers": ["com.microsoft.VSCode"]
+        }]
+      }]
+    },
+
+    {
+      "description": "英数 + M = Delete Line (Eclipse)",
+      "manipulators": [{
+        "type": "basic",
+        "from": {
+          "key_code": "m",
+          "modifiers": {
+            "mandatory": ["fn"]
+          }
+        },
+        "to": [{
+          "key_code": "d",
+          "modifiers": [
+            "command"
+          ]
+        }],
+        "conditions": [{
+          "type": "frontmost_application_if",
+          "bundle_identifiers": ["org.eclipse.platform.ide"]
+        }]
+      }]
+    },
+
+    {
+      "description": "英数 + Enter = New Line Below (Atom, VSCode)",
+      "manipulators": [{
+        "type": "basic",
+        "from": {
+          "key_code": "return_or_enter",
+          "modifiers": {
+            "mandatory": ["fn"]
+          }
+        },
+        "to": [{
+          "key_code": "return_or_enter",
+          "modifiers": [
+            "command"
+          ]
+        }],
+        "conditions": [{
+          "type": "frontmost_application_if",
+          "bundle_identifiers": [
+            "com.github.atom",
+            "com.microsoft.VSCode"
+          ]
+        }]
+      }]
+    },
+
+    {
+      "description": "英数 + Enter = New Line Below (Eclipse)",
+      "manipulators": [{
+        "type": "basic",
+        "from": {
+          "key_code": "return_or_enter",
+          "modifiers": {
+            "mandatory": ["fn"]
+          }
+        },
+        "to": [{
+          "key_code": "return_or_enter",
+          "modifiers": [
+            "shift"
+          ]
+        }],
+        "conditions": [{
+          "type": "frontmost_application_if",
+          "bundle_identifiers": ["org.eclipse.platform.ide"]
+        }]
+      }]
+    },
+
+    {
+      "description": "英数 + , / . = Move Line Up / Down (Atom)",
+      "manipulators": [{
+          "type": "basic",
+          "from": {
+            "key_code": "comma",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "up_arrow",
+            "modifiers": [
+              "command",
+              "control"
+            ]
+          }],
+          "conditions": [{
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["com.github.atom"]
+          }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "period",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "down_arrow",
+            "modifiers": [
+              "command",
+              "control"
+            ]
+          }],
+          "conditions": [{
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["com.github.atom"]
+          }]
+        }
+      ]
+    },
+
+    {
+      "description": "英数 + , / . = Move Line Up / Down (VSCode)",
+      "manipulators": [{
+          "type": "basic",
+          "from": {
+            "key_code": "comma",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "up_arrow",
+            "modifiers": [
+              "option"
+            ]
+          }],
+          "conditions": [{
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["com.microsoft.VSCode"]
+          }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "period",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "down_arrow",
+            "modifiers": [
+              "option"
+            ]
+          }],
+          "conditions": [{
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["com.microsoft.VSCode"]
+          }]
+        }
+      ]
+    },
+
+    {
+      "description": "英数 + , / . = Move Line Up / Down (Eclipse)",
+      "manipulators": [{
+          "type": "basic",
+          "from": {
+            "key_code": "comma",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "up_arrow",
+            "modifiers": [
+              "option"
+            ]
+          }],
+          "conditions": [{
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["org.eclipse.platform.ide"]
+          }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "period",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "down_arrow",
+            "modifiers": [
+              "option"
+            ]
+          }],
+          "conditions": [{
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["org.eclipse.platform.ide"]
+          }]
+        }
+      ]
+    },
+
+    {
+      "description": "英数 + 2 / 3 = Previous / Next Tab",
+      "manipulators": [{
+          "type": "basic",
+          "from": {
+            "key_code": "2",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "tab",
+            "modifiers": [
+              "control",
+              "shift"
+            ]
+          }],
+          "conditions": [{
+            "type": "frontmost_application_unless",
+            "bundle_identifiers": ["org.eclipse.platform.ide"]
+          }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "3",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "tab",
+            "modifiers": [
+              "control"
+            ]
+          }],
+          "conditions": [{
+            "type": "frontmost_application_unless",
+            "bundle_identifiers": ["org.eclipse.platform.ide"]
+          }]
+        }
+      ]
+    },
+
+    {
+      "description": "英数 + 2 / 3 = Previous / Next Tab (Eclipse)",
+      "manipulators": [{
+          "type": "basic",
+          "from": {
+            "key_code": "2",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "page_up",
+            "modifiers": [
+              "control"
+            ]
+          }],
+          "conditions": [{
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["org.eclipse.platform.ide"]
+          }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "3",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "page_down",
+            "modifiers": [
+              "control"
+            ]
+          }],
+          "conditions": [{
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["org.eclipse.platform.ide"]
+          }]
+        }
+      ]
+    },
+
+    {
+      "description": "英数 + 1 / 4 = Close / New Tab",
+      "manipulators": [{
+          "type": "basic",
+          "from": {
+            "key_code": "1",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "w",
+            "modifiers": [
+              "command"
+            ]
+          }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "4",
+            "modifiers": {
+              "mandatory": ["fn"]
+            }
+          },
+          "to": [{
+            "key_code": "t",
+            "modifiers": [
+              "command"
+            ]
+          }]
+        }
+      ]
+    },
+
+    {
+      "description": "[EXTRA] Shift + Space = Underscore",
+      "manipulators": [{
+        "type": "basic",
+        "from": {
+          "key_code": "spacebar",
+          "modifiers": {
+            "mandatory": ["shift"]
+          }
+        },
+        "to": [{
+          "key_code": "international1"
+        }],
+        "conditions": [{
+          "type": "input_source_if",
+          "input_sources": [{
+            "language": "en"
+          }]
+        }]
+      }]
+    },
+
+    {
+      "description": "Touchpad + J = Left Click (Multitouch-Extension required)",
+      "manipulators": [{
+        "type": "basic",
+        "from": {
+          "key_code": "j",
+          "modifiers": {
+            "optional": [
+              "any"
+            ]
+          }
+        },
+        "to": [{
+          "pointing_button": "button1"
+        }],
+        "conditions": [{
+          "type": "variable_unless",
+          "name": "multitouch_extension_finger_count_total",
+          "value": 0
+        }]
+      }]
+    },
+
+    {
+      "description": "Touchpad + K = Right Click (Multitouch-Extension required)",
+      "manipulators": [{
+        "type": "basic",
+        "from": {
+          "key_code": "k",
+          "modifiers": {
+            "optional": [
+              "any"
+            ]
+          }
+        },
+        "to": [{
+          "pointing_button": "button2"
+        }],
+        "conditions": [{
+          "type": "variable_unless",
+          "name": "multitouch_extension_finger_count_total",
+          "value": 0
+        }]
+      }]
+    },
+
+    {
+      "description": "Touchpad + L = Middle Click (Multitouch-Extension required)",
+      "manipulators": [{
+        "type": "basic",
+        "from": {
+          "key_code": "l",
+          "modifiers": {
+            "optional": [
+              "any"
+            ]
+          }
+        },
+        "to": [{
+          "pointing_button": "button3"
+        }],
+        "conditions": [{
+          "type": "variable_unless",
+          "name": "multitouch_extension_finger_count_total",
+          "value": 0
+        }]
+      }]
+    },
+
+    {
+      "description": "Touchpad + U / O = Previous / Next Tab (Multitouch-Extension required)",
+      "manipulators": [{
+          "type": "basic",
+          "from": {
+            "key_code": "u",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [{
+            "key_code": "tab",
+            "modifiers": [
+              "control",
+              "shift"
+            ]
+          }],
+          "conditions": [{
+              "type": "variable_unless",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 0
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["org.eclipse.platform.ide"]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "o",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [{
+            "key_code": "tab",
+            "modifiers": [
+              "control"
+            ]
+          }],
+          "conditions": [{
+              "type": "variable_unless",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 0
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["org.eclipse.platform.ide"]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "description": "Touchpad + U / O = Previous / Next Tab (Eclipse) (Multitouch-Extension required)",
+      "manipulators": [{
+          "type": "basic",
+          "from": {
+            "key_code": "u",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [{
+            "key_code": "page_up",
+            "modifiers": [
+              "control"
+            ]
+          }],
+          "conditions": [{
+              "type": "variable_unless",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 0
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["org.eclipse.platform.ide"]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "o",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [{
+            "key_code": "page_down",
+            "modifiers": [
+              "control"
+            ]
+          }],
+          "conditions": [{
+              "type": "variable_unless",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 0
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["org.eclipse.platform.ide"]
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "description": "Touchpad + M / I = Close / New Tab (Multitouch-Extension required)",
+      "manipulators": [{
+          "type": "basic",
+          "from": {
+            "key_code": "m",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [{
+            "key_code": "w",
+            "modifiers": [
+              "command"
+            ]
+          }],
+          "conditions": [{
+            "type": "variable_unless",
+            "name": "multitouch_extension_finger_count_total",
+            "value": 0
+          }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "i",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [{
+            "key_code": "t",
+            "modifiers": [
+              "command"
+            ]
+          }],
+          "conditions": [{
+            "type": "variable_unless",
+            "name": "multitouch_extension_finger_count_total",
+            "value": 0
+          }]
+        }
+      ]
+    }
+
+  ]
+}
