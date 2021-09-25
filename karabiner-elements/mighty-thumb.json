@@ -1,7 +1,7 @@
 {
   "title": "Mighty Thumb",
   "rules": [{
-      "description": "英数 as an extra modifier key (Required)",
+      "description": "Use 英数 as an extra modifier key (Required)",
       "manipulators": [{
         "type": "basic",
         "from": {
@@ -11,8 +11,17 @@
           }
         },
         "to": [{
-          "key_code": "fn",
+          "set_variable": {
+            "name": "mightythumb_l",
+            "value": 1
+          },
           "lazy": true
+        }],
+        "to_after_key_up": [{
+          "set_variable": {
+            "name": "mightythumb_l",
+            "value": 0
+          }
         }],
         "to_if_alone": [{
           "key_code": "japanese_eisuu"
@@ -25,49 +34,57 @@
       "manipulators": [{
           "type": "basic",
           "from": {
-            "key_code": "e",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "e"
           },
           "to": [{
             "key_code": "up_arrow"
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
           }]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "d",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "d"
           },
           "to": [{
             "key_code": "down_arrow"
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
           }]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "s",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "s"
           },
           "to": [{
             "key_code": "left_arrow"
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
           }]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "f",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "f"
           },
           "to": [{
             "key_code": "right_arrow"
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
           }]
         }
       ]
@@ -78,25 +95,29 @@
       "manipulators": [{
           "type": "basic",
           "from": {
-            "key_code": "w",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "w"
           },
           "to": [{
             "key_code": "page_up"
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
           }]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "r",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "r"
           },
           "to": [{
             "key_code": "page_down"
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
           }]
         }
       ]
@@ -107,27 +128,31 @@
       "manipulators": [{
           "type": "basic",
           "from": {
-            "key_code": "a",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "a"
           },
           "to": [{
             "key_code": "left_arrow",
             "modifiers": ["option"]
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
           }]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "g",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "g"
           },
           "to": [{
             "key_code": "right_arrow",
             "modifiers": ["option"]
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
           }]
         }
       ]
@@ -138,27 +163,31 @@
       "manipulators": [{
           "type": "basic",
           "from": {
-            "key_code": "q",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "q"
           },
           "to": [{
             "key_code": "left_arrow",
             "modifiers": ["command"]
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
           }]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "t",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "t"
           },
           "to": [{
             "key_code": "right_arrow",
             "modifiers": ["command"]
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
           }]
         }
       ]
@@ -169,53 +198,61 @@
       "manipulators": [{
           "type": "basic",
           "from": {
-            "key_code": "i",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "i"
           },
           "to": [{
             "key_code": "up_arrow",
             "modifiers": ["shift"]
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
           }]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "k",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "k"
           },
           "to": [{
             "key_code": "down_arrow",
             "modifiers": ["shift"]
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
           }]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "j",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "j"
           },
           "to": [{
             "key_code": "left_arrow",
             "modifiers": ["shift"]
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
           }]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "l",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "l"
           },
           "to": [{
             "key_code": "right_arrow",
             "modifiers": ["shift"]
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
           }]
         }
       ]
@@ -226,26 +263,30 @@
       "manipulators": [{
           "type": "basic",
           "from": {
-            "key_code": "u",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "u"
           },
           "to": [{
             "key_code": "tab",
             "modifiers": ["shift"]
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
           }]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "o",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "o"
           },
           "to": [{
             "key_code": "tab"
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
           }]
         }
       ]
@@ -256,26 +297,30 @@
       "manipulators": [{
           "type": "basic",
           "from": {
-            "key_code": "h",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "h"
           },
           "to": [{
             "key_code": "delete_or_backspace"
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
           }]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "n",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "n"
           },
           "to": [{
             "key_code": "delete_or_backspace",
             "modifiers": ["fn"]
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
           }]
         }
       ]
@@ -286,61 +331,61 @@
       "manipulators": [{
           "type": "basic",
           "from": {
-            "key_code": "z",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "z"
           },
           "to": [{
             "key_code": "z",
-            "modifiers": [
-              "command"
-            ]
+            "modifiers": ["command"]
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
           }]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "x",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "x"
           },
           "to": [{
             "key_code": "x",
-            "modifiers": [
-              "command"
-            ]
+            "modifiers": ["command"]
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
           }]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "c",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "c"
           },
           "to": [{
             "key_code": "c",
-            "modifiers": [
-              "command"
-            ]
+            "modifiers": ["command"]
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
           }]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "v",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "v"
           },
           "to": [{
             "key_code": "v",
-            "modifiers": [
-              "command"
-            ]
+            "modifiers": ["command"]
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
           }]
         }
       ]
@@ -351,10 +396,7 @@
       "manipulators": [{
         "type": "basic",
         "from": {
-          "key_code": "m",
-          "modifiers": {
-            "mandatory": ["fn"]
-          }
+          "key_code": "m"
         },
         "to": [{
           "key_code": "k",
@@ -364,9 +406,15 @@
           ]
         }],
         "conditions": [{
-          "type": "frontmost_application_if",
-          "bundle_identifiers": ["com.github.atom"]
-        }]
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["com.github.atom"]
+          },
+          {
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
+          }
+        ]
       }]
     },
 
@@ -375,10 +423,7 @@
       "manipulators": [{
         "type": "basic",
         "from": {
-          "key_code": "m",
-          "modifiers": {
-            "mandatory": ["fn"]
-          }
+          "key_code": "m"
         },
         "to": [{
           "key_code": "k",
@@ -388,9 +433,15 @@
           ]
         }],
         "conditions": [{
-          "type": "frontmost_application_if",
-          "bundle_identifiers": ["com.microsoft.VSCode"]
-        }]
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["com.microsoft.VSCode"]
+          },
+          {
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
+          }
+        ]
       }]
     },
 
@@ -399,21 +450,22 @@
       "manipulators": [{
         "type": "basic",
         "from": {
-          "key_code": "m",
-          "modifiers": {
-            "mandatory": ["fn"]
-          }
+          "key_code": "m"
         },
         "to": [{
           "key_code": "d",
-          "modifiers": [
-            "command"
-          ]
+          "modifiers": ["command"]
         }],
         "conditions": [{
-          "type": "frontmost_application_if",
-          "bundle_identifiers": ["org.eclipse.platform.ide"]
-        }]
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["org.eclipse.platform.ide"]
+          },
+          {
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
+          }
+        ]
       }]
     },
 
@@ -422,24 +474,25 @@
       "manipulators": [{
         "type": "basic",
         "from": {
-          "key_code": "return_or_enter",
-          "modifiers": {
-            "mandatory": ["fn"]
-          }
+          "key_code": "return_or_enter"
         },
         "to": [{
           "key_code": "return_or_enter",
-          "modifiers": [
-            "command"
-          ]
+          "modifiers": ["command"]
         }],
         "conditions": [{
-          "type": "frontmost_application_if",
-          "bundle_identifiers": [
-            "com.github.atom",
-            "com.microsoft.VSCode"
-          ]
-        }]
+            "type": "frontmost_application_if",
+            "bundle_identifiers": [
+              "com.github.atom",
+              "com.microsoft.VSCode"
+            ]
+          },
+          {
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
+          }
+        ]
       }]
     },
 
@@ -448,21 +501,22 @@
       "manipulators": [{
         "type": "basic",
         "from": {
-          "key_code": "return_or_enter",
-          "modifiers": {
-            "mandatory": ["fn"]
-          }
+          "key_code": "return_or_enter"
         },
         "to": [{
           "key_code": "return_or_enter",
-          "modifiers": [
-            "shift"
-          ]
+          "modifiers": ["shift"]
         }],
         "conditions": [{
-          "type": "frontmost_application_if",
-          "bundle_identifiers": ["org.eclipse.platform.ide"]
-        }]
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["org.eclipse.platform.ide"]
+          },
+          {
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
+          }
+        ]
       }]
     },
 
@@ -471,10 +525,7 @@
       "manipulators": [{
           "type": "basic",
           "from": {
-            "key_code": "comma",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "comma"
           },
           "to": [{
             "key_code": "up_arrow",
@@ -484,17 +535,20 @@
             ]
           }],
           "conditions": [{
-            "type": "frontmost_application_if",
-            "bundle_identifiers": ["com.github.atom"]
-          }]
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["com.github.atom"]
+            },
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "period",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "period"
           },
           "to": [{
             "key_code": "down_arrow",
@@ -504,9 +558,15 @@
             ]
           }],
           "conditions": [{
-            "type": "frontmost_application_if",
-            "bundle_identifiers": ["com.github.atom"]
-          }]
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["com.github.atom"]
+            },
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         }
       ]
     },
@@ -518,38 +578,43 @@
           "from": {
             "key_code": "comma",
             "modifiers": {
-              "mandatory": ["fn"]
+              "mandatory": ["mightythumb_l"]
             }
           },
           "to": [{
             "key_code": "up_arrow",
-            "modifiers": [
-              "option"
-            ]
+            "modifiers": ["option"]
           }],
           "conditions": [{
-            "type": "frontmost_application_if",
-            "bundle_identifiers": ["com.microsoft.VSCode"]
-          }]
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["com.microsoft.VSCode"]
+            },
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "period",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "period"
           },
           "to": [{
             "key_code": "down_arrow",
-            "modifiers": [
-              "option"
-            ]
+            "modifiers": ["option"]
           }],
           "conditions": [{
-            "type": "frontmost_application_if",
-            "bundle_identifiers": ["com.microsoft.VSCode"]
-          }]
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["com.microsoft.VSCode"]
+            },
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         }
       ]
     },
@@ -559,40 +624,42 @@
       "manipulators": [{
           "type": "basic",
           "from": {
-            "key_code": "comma",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "comma"
           },
           "to": [{
             "key_code": "up_arrow",
-            "modifiers": [
-              "option"
-            ]
+            "modifiers": ["option"]
           }],
           "conditions": [{
-            "type": "frontmost_application_if",
-            "bundle_identifiers": ["org.eclipse.platform.ide"]
-          }]
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["org.eclipse.platform.ide"]
+            },
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "period",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "period"
           },
           "to": [{
             "key_code": "down_arrow",
-            "modifiers": [
-              "option"
-            ]
+            "modifiers": ["option"]
           }],
           "conditions": [{
-            "type": "frontmost_application_if",
-            "bundle_identifiers": ["org.eclipse.platform.ide"]
-          }]
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["org.eclipse.platform.ide"]
+            },
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         }
       ]
     },
@@ -602,10 +669,7 @@
       "manipulators": [{
           "type": "basic",
           "from": {
-            "key_code": "2",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "2"
           },
           "to": [{
             "key_code": "tab",
@@ -615,28 +679,35 @@
             ]
           }],
           "conditions": [{
-            "type": "frontmost_application_unless",
-            "bundle_identifiers": ["org.eclipse.platform.ide"]
-          }]
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["org.eclipse.platform.ide"]
+            },
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "3",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "3"
           },
           "to": [{
             "key_code": "tab",
-            "modifiers": [
-              "control"
-            ]
+            "modifiers": ["control"]
           }],
           "conditions": [{
-            "type": "frontmost_application_unless",
-            "bundle_identifiers": ["org.eclipse.platform.ide"]
-          }]
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["org.eclipse.platform.ide"]
+            },
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         }
       ]
     },
@@ -646,40 +717,42 @@
       "manipulators": [{
           "type": "basic",
           "from": {
-            "key_code": "2",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "2"
           },
           "to": [{
             "key_code": "page_up",
-            "modifiers": [
-              "control"
-            ]
+            "modifiers": ["control"]
           }],
           "conditions": [{
-            "type": "frontmost_application_if",
-            "bundle_identifiers": ["org.eclipse.platform.ide"]
-          }]
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["org.eclipse.platform.ide"]
+            },
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "3",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "3"
           },
           "to": [{
             "key_code": "page_down",
-            "modifiers": [
-              "control"
-            ]
+            "modifiers": ["control"]
           }],
           "conditions": [{
-            "type": "frontmost_application_if",
-            "bundle_identifiers": ["org.eclipse.platform.ide"]
-          }]
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["org.eclipse.platform.ide"]
+            },
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         }
       ]
     },
@@ -689,31 +762,31 @@
       "manipulators": [{
           "type": "basic",
           "from": {
-            "key_code": "1",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "1"
           },
           "to": [{
             "key_code": "w",
-            "modifiers": [
-              "command"
-            ]
+            "modifiers": ["command"]
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
           }]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "4",
-            "modifiers": {
-              "mandatory": ["fn"]
-            }
+            "key_code": "4"
           },
           "to": [{
             "key_code": "t",
-            "modifiers": [
-              "command"
-            ]
+            "modifiers": ["command"]
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
           }]
         }
       ]
