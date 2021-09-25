@@ -793,6 +793,24 @@
     },
 
     {
+      "description": "英数 + Tab = Enter",
+      "manipulators": [{
+        "type": "basic",
+        "from": {
+          "key_code": "tab"
+        },
+        "to": [{
+          "key_code": "return_or_enter"
+        }],
+        "conditions": [{
+          "type": "variable_if",
+          "name": "mightythumb_l",
+          "value": 1
+        }]
+      }]
+    },
+
+    {
       "description": "英数 + Control = Numpad Mode (Space=0 NM,=123 JKL=456 UIO=789)",
       "manipulators": [{
           "type": "basic",
