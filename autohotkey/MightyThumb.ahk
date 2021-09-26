@@ -74,22 +74,21 @@ vk1D & 4::ControlTab(3) ; Thumb + 4 = New tab
 vk1D & Tab::Send, {Return} ; Thumb + Tab = Return
 
 ; numpad
-vk1C & Space::Send, {Numpad0} ; Thumb(R) + Space = 0
-vk1C & n::Send, {Numpad1}     ; Thumb(R) + N     = 1
-vk1C & m::Send, {Numpad2}     ; Thumb(R) + M     = 2
-vk1C & ,::Send, {Numpad3}     ; Thumb(R) + ,     = 3
-vk1C & j::Send, {Numpad4}     ; Thumb(R) + J     = 4
-vk1C & k::Send, {Numpad5}     ; Thumb(R) + K     = 5
-vk1C & l::Send, {Numpad6}     ; Thumb(R) + L     = 6
-vk1C & u::Send, {Numpad7}     ; Thumb(R) + U     = 7
-vk1C & i::Send, {Numpad8}     ; Thumb(R) + I     = 8
-vk1C & o::Send, {Numpad9}     ; Thumb(R) + O     = 9
-vk1C & .::Send, {NumpadEnter} ; Thumb(R) + .     = Enter
-vk1C & `;::Send, {NumpadAdd}  ; Thumb(R) + ;     = [+]
-vk1C & p::Send, {NumpadSub}   ; Thumb(R) + P     = [-]
-vk1C & h::                    ; Thumb(R) + H
-SetImeState("A", 0)           ; = Turn IME off
-Send, {BS}                    ; + Backspace
+LControl & vk1D & Space::Send, {Numpad0} ; Thumb + Control + Space = 0
+LControl & vk1D & n::Send, {Numpad1}     ; Thumb + Control + N     = 1
+LControl & vk1D & m::Send, {Numpad2}     ; Thumb + Control + M     = 2
+LControl & vk1D & ,::Send, {Numpad3}     ; Thumb + Control + ,     = 3
+LControl & vk1D & j::Send, {Numpad4}     ; Thumb + Control + J     = 4
+LControl & vk1D & k::Send, {Numpad5}     ; Thumb + Control + K     = 5
+LControl & vk1D & l::Send, {Numpad6}     ; Thumb + Control + L     = 6
+LControl & vk1D & u::Send, {Numpad7}     ; Thumb + Control + U     = 7
+LControl & vk1D & i::Send, {Numpad8}     ; Thumb + Control + I     = 8
+LControl & vk1D & o::Send, {Numpad9}     ; Thumb + Control + O     = 9
+LControl & vk1D & .::Send, {NumpadEnter} ; Thumb + Control + .     = Enter
+LControl & vk1D & `;::Send, {NumpadAdd}  ; Thumb + Control + ;     = [+]
+LControl & vk1D & p::Send, {NumpadSub}   ; Thumb + Control + P     = [-]
+LControl & vk1D & h::Send, {BS}          ; Thumb + Control + H     = Backspace
+
 Return
 
 ; //////// AHK Directives (Do not edit) ////////
