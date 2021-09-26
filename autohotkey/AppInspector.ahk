@@ -1,7 +1,6 @@
-; # App Inspector
-; ----------------------------------------------------------------------------------
-; This is a script for AutoHotKey (http://www.autohotkey.com/) available on Windows.
-; Author: amekusa <post@amekusa.com>
+;  App Inspector
+; --------------------- ---- -- -
+;  Author: amekusa.com
 
 IsMaximized(Wn) {
 	WinGet, r, MinMax, ahk_id %Wn%
