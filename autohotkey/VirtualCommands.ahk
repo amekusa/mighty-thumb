@@ -1,7 +1,6 @@
-; # Virtual Commands
-; ----------------------------------------------------------------------------------
-; This is a script for AutoHotKey (http://www.autohotkey.com/) available on Windows.
-; Author: amekusa <post@amekusa.com>
+;  Virtual Commands
+; --------------------- ---- -- -
+;  Author: amekusa.com
 
 EditText(X) {
 	; 0: Delete line

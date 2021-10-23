@@ -1,95 +1,94 @@
-; # Mighty Thumb
-; Turn your thumb key into an extra modifier key.
-; ----------------------------------------------------------------------------------
-; This is a script for AutoHotKey (http://www.autohotkey.com/) available on Windows.
-; You can compile this as a single .EXE-cutable file via context menu.
+;  Mighty Thumb
+;  Use the thumb key as an special modifier key.
+; -------------------------------------------------------------------------------------
+;  This is a script for AutoHotKey (http://www.autohotkey.com/) available for Windows.
+;  You can compile this file as a single executable file from context menu if you
+;  have installed AutoHotKey in your system.
 ;
-; Mighty Thumb is hosted on: https://github.com/amekusa/mighty-thumb
-; Contributions are welcomed :)
+;  Mighty Thumb is hosted on: https://github.com/amekusa/mighty-thumb
+;  Contributions are welcomed!
 
 Process, Priority, , R
 SendMode Event
 SetWorkingDir %A_ScriptDir%
 Return
 
-; ## Cursor
-vk1D & e::Send, {Up}    ; Thumb + E = Up
-vk1D & s::Send, {Left}  ; Thumb + S = Left
-vk1D & d::Send, {Down}  ; Thumb + D = Down
-vk1D & f::Send, {Right} ; Thumb + F = Right
-
-; ## View
-vk1D & w::Send, {PgUp} ; Thumb + W = Page Up
-vk1D & r::Send, {PgDn} ; Thumb + R = Page Down
-
-; ## Edit
-vk1D & c::Send, ^c ; Thumb + C = Copy
-vk1D & x::Send, ^x ; Thumb + X = Cut
-vk1D & v::Send, ^v ; Thumb + V = Paste
-vk1D & z::Send, ^z ; Thumb + Z = Undo
-
-; ## Carriage
-vk1D & a::Send, ^{Left}  ; Thumb + A = Previous word
-vk1D & g::Send, ^{Right} ; Thumb + G = Next word
-vk1D & q::Send, {Home}   ; Thumb + Q = Beginning of line
-vk1D & t::Send, {End}    ; Thumb + T = End of line
-
-; ## Select
-vk1D & j::Send, +{Left}                  ; Thumb + J = Shift + Left
-vk1D & l::Send, +{Right}                 ; Thumb + L = Shift + Right
-vk1D & i::Send, +{Up}                    ; Thumb + I = Shift + Up
-vk1D & k::Send, +{Down}                  ; Thumb + K = Shift + Down
-vk1D & p::Send, {End}{Home}{Home}+{Down} ; Thumb + P = Select the current line
-
-; ## Delete
-vk1D & h::Send, {BS}     ; Thumb + H = Backward delete
-vk1D & n::Send, {Delete} ; Thumb + N = Forward delete
-
-; ## Spacing
-vk1D & `;::Send, {Space} ; Thumb + ; = Space
-vk1D & o::Send, {Tab}    ; Thumb + O = Tab       (Indent)
-vk1D & u::Send, +{Tab}   ; Thumb + U = Shift+Tab (Unindent)
-
-; ## Complex Operations
-vk1D & m::EditText(0)     ; Thumb + M     = Delete line
-vk1D & Enter::EditText(1) ; Thumb + Enter = New line below
-vk1D & ,::EditText(2)     ; Thumb + ,     = Move line up
-vk1D & .::EditText(3)     ; Thumb + .     = Move line down
-
-; ## IME
+; IME
 vk1D::SetImeState("A", 0) ; Thumb    = Turn IME off
 vk1C::SetImeState("A", 1) ; Thumb(R) = Turn IME on
 
-; ## GUI windows
-vk1D & Escape::WinClose, A ; Thumb + Esc = Close active window
+#If GetKeyState("vk1D")
 
-; ## GUI tabs
-vk1D & 1::ControlTab(2) ; Thumb + 1 = Close tab
-vk1D & 2::ControlTab(0) ; Thumb + 2 = Previous tab
-vk1D & 3::ControlTab(1) ; Thumb + 3 = Next tab
-vk1D & 4::ControlTab(3) ; Thumb + 4 = New tab
+; cursor keys
+e::Send, {Up}    ; Thumb + E = Up
+s::Send, {Left}  ; Thumb + S = Left
+d::Send, {Down}  ; Thumb + D = Down
+f::Send, {Right} ; Thumb + F = Right
 
-; ## Special keys
-vk1D & Tab::Send, {Return} ; Thumb + Tab = Return
+; scroll
+w::Send, {PgUp} ; Thumb + W = Page Up
+r::Send, {PgDn} ; Thumb + R = Page Down
 
-; ## Numpad
-vk1C & Space::Send, {Numpad0} ; Thumb(R) + Space = 0
-vk1C & n::Send, {Numpad1}     ; Thumb(R) + N     = 1
-vk1C & m::Send, {Numpad2}     ; Thumb(R) + M     = 2
-vk1C & ,::Send, {Numpad3}     ; Thumb(R) + ,     = 3
-vk1C & j::Send, {Numpad4}     ; Thumb(R) + J     = 4
-vk1C & k::Send, {Numpad5}     ; Thumb(R) + K     = 5
-vk1C & l::Send, {Numpad6}     ; Thumb(R) + L     = 6
-vk1C & u::Send, {Numpad7}     ; Thumb(R) + U     = 7
-vk1C & i::Send, {Numpad8}     ; Thumb(R) + I     = 8
-vk1C & o::Send, {Numpad9}     ; Thumb(R) + O     = 9
-vk1C & .::Send, {NumpadEnter} ; Thumb(R) + .     = Enter
-vk1C & `;::Send, {NumpadAdd}  ; Thumb(R) + ;     = [+]
-vk1C & p::Send, {NumpadSub}   ; Thumb(R) + P     = [-]
-vk1C & h::
-SetImeState("A", 0)           ; Turn IME off
-Send, {BS}                    ; + Thumb(R) + H   = Backspace
-Return
+; edit
+c::Send, ^c ; Thumb + C = Copy
+x::Send, ^x ; Thumb + X = Cut
+v::Send, ^v ; Thumb + V = Paste
+z::Send, ^z ; Thumb + Z = Undo
+
+; jumping cursor
+a::Send, ^{Left}  ; Thumb + A = Previous word
+g::Send, ^{Right} ; Thumb + G = Next word
+q::Send, {Home}   ; Thumb + Q = Beginning of line
+t::Send, {End}    ; Thumb + T = End of line
+
+; text selection
+j::Send, +{Left}                  ; Thumb + J = Shift + Left
+l::Send, +{Right}                 ; Thumb + L = Shift + Right
+i::Send, +{Up}                    ; Thumb + I = Shift + Up
+k::Send, +{Down}                  ; Thumb + K = Shift + Down
+p::Send, {End}{Home}{Home}+{Down} ; Thumb + P = Select the current line
+
+; delete
+h::Send, {BS}     ; Thumb + H = Backward delete
+n::Send, {Delete} ; Thumb + N = Forward delete
+
+; indent
+o::Send, {Tab}    ; Thumb + O = Tab       (Indent)
+u::Send, +{Tab}   ; Thumb + U = Shift+Tab (Unindent)
+
+; line editing
+m::EditText(0)     ; Thumb + M     = Delete line
+Enter::EditText(1) ; Thumb + Enter = New line below
+,::EditText(2)     ; Thumb + ,     = Move line up
+.::EditText(3)     ; Thumb + .     = Move line down
+
+; close window
+Escape::WinClose, A ; Thumb + Esc = Close active window
+
+; browser tabs
+1::ControlTab(2) ; Thumb + 1 = Close tab
+2::ControlTab(0) ; Thumb + 2 = Previous tab
+3::ControlTab(1) ; Thumb + 3 = Next tab
+4::ControlTab(3) ; Thumb + 4 = New tab
+
+; special key bindings
+Tab::Send, {Return} ; Thumb + Tab = Return
+
+; numpad
+Control & Space::Send, {Numpad0} ; Thumb + Control + Space = 0
+Control & n::Send, {Numpad1}     ; Thumb + Control + N     = 1
+Control & m::Send, {Numpad2}     ; Thumb + Control + M     = 2
+Control & ,::Send, {Numpad3}     ; Thumb + Control + ,     = 3
+Control & j::Send, {Numpad4}     ; Thumb + Control + J     = 4
+Control & k::Send, {Numpad5}     ; Thumb + Control + K     = 5
+Control & l::Send, {Numpad6}     ; Thumb + Control + L     = 6
+Control & u::Send, {Numpad7}     ; Thumb + Control + U     = 7
+Control & i::Send, {Numpad8}     ; Thumb + Control + I     = 8
+Control & o::Send, {Numpad9}     ; Thumb + Control + O     = 9
+Control & .::Send, {NumpadEnter} ; Thumb + Control + .     = Enter
+Control & `;::Send, {NumpadAdd}  ; Thumb + Control + ;     = [+]
+Control & p::Send, {NumpadSub}   ; Thumb + Control + P     = [-]
+Control & h::Send, {BS}          ; Thumb + Control + H     = Backspace
 
 ; //////// AHK Directives (Do not edit) ////////
 #NoEnv
