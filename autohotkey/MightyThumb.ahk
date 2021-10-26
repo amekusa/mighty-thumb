@@ -46,7 +46,6 @@ j::Send, +{Left}                  ; Thumb + J = Shift + Left
 l::Send, +{Right}                 ; Thumb + L = Shift + Right
 i::Send, +{Up}                    ; Thumb + I = Shift + Up
 k::Send, +{Down}                  ; Thumb + K = Shift + Down
-p::Send, {End}{Home}{Home}+{Down} ; Thumb + P = Select the current line
 
 ; delete
 h::Send, {BS}     ; Thumb + H = Backward delete
