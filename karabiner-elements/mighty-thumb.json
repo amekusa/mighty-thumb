@@ -811,6 +811,47 @@
     },
 
     {
+      "description": "英数 + Control + A / D = Browser Back / Forward",
+      "manipulators": [{
+          "type": "basic",
+          "from": {
+            "key_code": "a",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [{
+            "key_code": "left_arrow",
+            "modifiers": ["command"]
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
+          }]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "d",
+            "modifiers": {
+              "mandatory": ["control"]
+            }
+          },
+          "to": [{
+            "key_code": "right_arrow",
+            "modifiers": ["command"]
+          }],
+          "conditions": [{
+            "type": "variable_if",
+            "name": "mightythumb_l",
+            "value": 1
+          }]
+        }
+      ]
+    },
+
+    {
       "description": "英数 + Control = Numpad Mode (Space=0 NM,=123 JKL=456 UIO=789)",
       "manipulators": [{
           "type": "basic",
