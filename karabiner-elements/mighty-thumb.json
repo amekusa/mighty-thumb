@@ -576,10 +576,7 @@
       "manipulators": [{
           "type": "basic",
           "from": {
-            "key_code": "comma",
-            "modifiers": {
-              "mandatory": ["mightythumb_l"]
-            }
+            "key_code": "comma"
           },
           "to": [{
             "key_code": "up_arrow",
