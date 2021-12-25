@@ -1128,11 +1128,17 @@
         "to": [{
           "pointing_button": "button1"
         }],
-        "conditions": [{
-          "type": "variable_unless",
-          "name": "multitouch_extension_finger_count_total",
-          "value": 0
-        }]
+        "conditions": [
+          {
+            "type": "variable_unless",
+            "name": "multitouch_extension_finger_count_total",
+            "value": 0
+          },
+          {
+            "type": "frontmost_application_unless",
+            "bundle_identifiers": ["com.apple.loginwindow"]
+          }
+        ]
       }]
     },
 
@@ -1151,11 +1157,17 @@
         "to": [{
           "pointing_button": "button2"
         }],
-        "conditions": [{
-          "type": "variable_unless",
-          "name": "multitouch_extension_finger_count_total",
-          "value": 0
-        }]
+        "conditions": [
+          {
+            "type": "variable_unless",
+            "name": "multitouch_extension_finger_count_total",
+            "value": 0
+          },
+          {
+            "type": "frontmost_application_unless",
+            "bundle_identifiers": ["com.apple.loginwindow"]
+          }
+        ]
       }]
     },
 
@@ -1174,11 +1186,17 @@
         "to": [{
           "pointing_button": "button3"
         }],
-        "conditions": [{
-          "type": "variable_unless",
-          "name": "multitouch_extension_finger_count_total",
-          "value": 0
-        }]
+        "conditions": [
+          {
+            "type": "variable_unless",
+            "name": "multitouch_extension_finger_count_total",
+            "value": 0
+          },
+          {
+            "type": "frontmost_application_unless",
+            "bundle_identifiers": ["com.apple.loginwindow"]
+          }
+        ]
       }]
     },
 
@@ -1208,7 +1226,10 @@
             },
             {
               "type": "frontmost_application_unless",
-              "bundle_identifiers": ["org.eclipse.platform.ide"]
+              "bundle_identifiers": [
+                "com.apple.loginwindow",
+                "org.eclipse.platform.ide"
+              ]
             }
           ]
         },
@@ -1235,7 +1256,10 @@
             },
             {
               "type": "frontmost_application_unless",
-              "bundle_identifiers": ["org.eclipse.platform.ide"]
+              "bundle_identifiers": [
+                "com.apple.loginwindow",
+                "org.eclipse.platform.ide"
+              ]
             }
           ]
         }
@@ -1319,11 +1343,17 @@
               "command"
             ]
           }],
-          "conditions": [{
-            "type": "variable_unless",
-            "name": "multitouch_extension_finger_count_total",
-            "value": 0
-          }]
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 0
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["com.apple.loginwindow"]
+            }
+          ]
         },
         {
           "type": "basic",
@@ -1341,11 +1371,17 @@
               "command"
             ]
           }],
-          "conditions": [{
-            "type": "variable_unless",
-            "name": "multitouch_extension_finger_count_total",
-            "value": 0
-          }]
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 0
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["com.apple.loginwindow"]
+            }
+          ]
         }
       ]
     }
