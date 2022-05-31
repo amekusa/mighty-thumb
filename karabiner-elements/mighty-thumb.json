@@ -30,6 +30,26 @@
     },
 
     {
+      "description": "Use かな as ALT modifier key",
+      "manipulators": [{
+        "type": "basic",
+        "from": {
+          "key_code": "japanese_kana",
+          "modifiers": {
+            "optional": ["any"]
+          }
+        },
+        "to": [{
+          "key_code": "left_option",
+          "lazy": true
+        }],
+        "to_if_alone": [{
+          "key_code": "japanese_kana"
+        }]
+      }]
+    },
+
+    {
       "description": "英数 + E / D / S / F = Up / Down / Left / Right",
       "manipulators": [{
           "type": "basic",
@@ -1128,8 +1148,7 @@
         "to": [{
           "pointing_button": "button1"
         }],
-        "conditions": [
-          {
+        "conditions": [{
             "type": "variable_unless",
             "name": "multitouch_extension_finger_count_total",
             "value": 0
@@ -1157,8 +1176,7 @@
         "to": [{
           "pointing_button": "button2"
         }],
-        "conditions": [
-          {
+        "conditions": [{
             "type": "variable_unless",
             "name": "multitouch_extension_finger_count_total",
             "value": 0
@@ -1186,8 +1204,7 @@
         "to": [{
           "pointing_button": "button3"
         }],
-        "conditions": [
-          {
+        "conditions": [{
             "type": "variable_unless",
             "name": "multitouch_extension_finger_count_total",
             "value": 0
@@ -1343,8 +1360,7 @@
               "command"
             ]
           }],
-          "conditions": [
-            {
+          "conditions": [{
               "type": "variable_unless",
               "name": "multitouch_extension_finger_count_total",
               "value": 0
@@ -1371,8 +1387,7 @@
               "command"
             ]
           }],
-          "conditions": [
-            {
+          "conditions": [{
               "type": "variable_unless",
               "name": "multitouch_extension_finger_count_total",
               "value": 0
