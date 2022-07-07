@@ -28,7 +28,6 @@
         }]
       }]
     },
-
     {
       "description": "Use かな as ALT modifier key",
       "manipulators": [{
@@ -48,7 +47,6 @@
         }]
       }]
     },
-
     {
       "description": "英数 + E / D / S / F = Up / Down / Left / Right",
       "manipulators": [{
@@ -109,7 +107,6 @@
         }
       ]
     },
-
     {
       "description": "英数 + W / R = Page Up / Down",
       "manipulators": [{
@@ -142,7 +139,6 @@
         }
       ]
     },
-
     {
       "description": "英数 + A / G = Previous / Next Word",
       "manipulators": [{
@@ -177,7 +173,6 @@
         }
       ]
     },
-
     {
       "description": "英数 + Q / T = Beginning / End of Line",
       "manipulators": [{
@@ -212,7 +207,6 @@
         }
       ]
     },
-
     {
       "description": "英数 + I / K / J / L = Select Text",
       "manipulators": [{
@@ -277,7 +271,6 @@
         }
       ]
     },
-
     {
       "description": "英数 + U / O = Unindent / Indent",
       "manipulators": [{
@@ -311,7 +304,6 @@
         }
       ]
     },
-
     {
       "description": "英数 + H / N = Backward / Forward Delete",
       "manipulators": [{
@@ -345,7 +337,6 @@
         }
       ]
     },
-
     {
       "description": "英数 + Z / X / C / V = Undo / Cut / Copy / Paste",
       "manipulators": [{
@@ -410,7 +401,6 @@
         }
       ]
     },
-
     {
       "description": "英数 + M = Delete Line (Atom)",
       "manipulators": [{
@@ -420,24 +410,20 @@
         },
         "to": [{
           "key_code": "k",
-          "modifiers": [
-            "control",
-            "shift"
-          ]
+          "modifiers": ["control", "shift"]
         }],
         "conditions": [{
-            "type": "frontmost_application_if",
-            "bundle_identifiers": ["com.github.atom"]
-          },
-          {
             "type": "variable_if",
             "name": "mightythumb_l",
             "value": 1
+          },
+          {
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["com.github.atom"]
           }
         ]
       }]
     },
-
     {
       "description": "英数 + M = Delete Line (VSCode)",
       "manipulators": [{
@@ -447,24 +433,20 @@
         },
         "to": [{
           "key_code": "k",
-          "modifiers": [
-            "command",
-            "shift"
-          ]
+          "modifiers": ["command", "shift"]
         }],
         "conditions": [{
-            "type": "frontmost_application_if",
-            "bundle_identifiers": ["com.microsoft.VSCode"]
-          },
-          {
             "type": "variable_if",
             "name": "mightythumb_l",
             "value": 1
+          },
+          {
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["com.microsoft.VSCode"]
           }
         ]
       }]
     },
-
     {
       "description": "英数 + M = Delete Line (Eclipse)",
       "manipulators": [{
@@ -477,18 +459,17 @@
           "modifiers": ["command"]
         }],
         "conditions": [{
-            "type": "frontmost_application_if",
-            "bundle_identifiers": ["org.eclipse.platform.ide"]
-          },
-          {
             "type": "variable_if",
             "name": "mightythumb_l",
             "value": 1
+          },
+          {
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["org.eclipse.platform.ide"]
           }
         ]
       }]
     },
-
     {
       "description": "英数 + Enter = New Line Below (Atom, VSCode)",
       "manipulators": [{
@@ -501,21 +482,17 @@
           "modifiers": ["command"]
         }],
         "conditions": [{
-            "type": "frontmost_application_if",
-            "bundle_identifiers": [
-              "com.github.atom",
-              "com.microsoft.VSCode"
-            ]
-          },
-          {
             "type": "variable_if",
             "name": "mightythumb_l",
             "value": 1
+          },
+          {
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["com.github.atom", "com.microsoft.VSCode"]
           }
         ]
       }]
     },
-
     {
       "description": "英数 + Enter = New Line Below (Eclipse)",
       "manipulators": [{
@@ -528,18 +505,17 @@
           "modifiers": ["shift"]
         }],
         "conditions": [{
-            "type": "frontmost_application_if",
-            "bundle_identifiers": ["org.eclipse.platform.ide"]
-          },
-          {
             "type": "variable_if",
             "name": "mightythumb_l",
             "value": 1
+          },
+          {
+            "type": "frontmost_application_if",
+            "bundle_identifiers": ["org.eclipse.platform.ide"]
           }
         ]
       }]
     },
-
     {
       "description": "英数 + , / . = Move Line Up / Down (Atom)",
       "manipulators": [{
@@ -549,19 +525,16 @@
           },
           "to": [{
             "key_code": "up_arrow",
-            "modifiers": [
-              "command",
-              "control"
-            ]
+            "modifiers": ["command", "control"]
           }],
           "conditions": [{
-              "type": "frontmost_application_if",
-              "bundle_identifiers": ["com.github.atom"]
-            },
-            {
               "type": "variable_if",
               "name": "mightythumb_l",
               "value": 1
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["com.github.atom"]
             }
           ]
         },
@@ -572,27 +545,23 @@
           },
           "to": [{
             "key_code": "down_arrow",
-            "modifiers": [
-              "command",
-              "control"
-            ]
+            "modifiers": ["command", "control"]
           }],
           "conditions": [{
-              "type": "frontmost_application_if",
-              "bundle_identifiers": ["com.github.atom"]
-            },
-            {
               "type": "variable_if",
               "name": "mightythumb_l",
               "value": 1
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["com.github.atom"]
             }
           ]
         }
       ]
     },
-
     {
-      "description": "英数 + , / . = Move Line Up / Down (VSCode)",
+      "description": "英数 + , / . = Move Line Up / Down (VSCode, Eclipse)",
       "manipulators": [{
           "type": "basic",
           "from": {
@@ -603,13 +572,16 @@
             "modifiers": ["option"]
           }],
           "conditions": [{
-              "type": "frontmost_application_if",
-              "bundle_identifiers": ["com.microsoft.VSCode"]
-            },
-            {
               "type": "variable_if",
               "name": "mightythumb_l",
               "value": 1
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode",
+                "org.eclipse.platform.ide"
+              ]
             }
           ]
         },
@@ -623,64 +595,21 @@
             "modifiers": ["option"]
           }],
           "conditions": [{
-              "type": "frontmost_application_if",
-              "bundle_identifiers": ["com.microsoft.VSCode"]
-            },
-            {
               "type": "variable_if",
               "name": "mightythumb_l",
               "value": 1
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode",
+                "org.eclipse.platform.ide"
+              ]
             }
           ]
         }
       ]
     },
-
-    {
-      "description": "英数 + , / . = Move Line Up / Down (Eclipse)",
-      "manipulators": [{
-          "type": "basic",
-          "from": {
-            "key_code": "comma"
-          },
-          "to": [{
-            "key_code": "up_arrow",
-            "modifiers": ["option"]
-          }],
-          "conditions": [{
-              "type": "frontmost_application_if",
-              "bundle_identifiers": ["org.eclipse.platform.ide"]
-            },
-            {
-              "type": "variable_if",
-              "name": "mightythumb_l",
-              "value": 1
-            }
-          ]
-        },
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "period"
-          },
-          "to": [{
-            "key_code": "down_arrow",
-            "modifiers": ["option"]
-          }],
-          "conditions": [{
-              "type": "frontmost_application_if",
-              "bundle_identifiers": ["org.eclipse.platform.ide"]
-            },
-            {
-              "type": "variable_if",
-              "name": "mightythumb_l",
-              "value": 1
-            }
-          ]
-        }
-      ]
-    },
-
     {
       "description": "英数 + 2 / 3 = Previous / Next Tab",
       "manipulators": [{
@@ -690,19 +619,16 @@
           },
           "to": [{
             "key_code": "tab",
-            "modifiers": [
-              "control",
-              "shift"
-            ]
+            "modifiers": ["control", "shift"]
           }],
           "conditions": [{
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["org.eclipse.platform.ide"]
-            },
-            {
               "type": "variable_if",
               "name": "mightythumb_l",
               "value": 1
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["org.eclipse.platform.ide"]
             }
           ]
         },
@@ -716,19 +642,18 @@
             "modifiers": ["control"]
           }],
           "conditions": [{
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": ["org.eclipse.platform.ide"]
-            },
-            {
               "type": "variable_if",
               "name": "mightythumb_l",
               "value": 1
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": ["org.eclipse.platform.ide"]
             }
           ]
         }
       ]
     },
-
     {
       "description": "英数 + 2 / 3 = Previous / Next Tab (Eclipse)",
       "manipulators": [{
@@ -741,13 +666,13 @@
             "modifiers": ["control"]
           }],
           "conditions": [{
-              "type": "frontmost_application_if",
-              "bundle_identifiers": ["org.eclipse.platform.ide"]
-            },
-            {
               "type": "variable_if",
               "name": "mightythumb_l",
               "value": 1
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["org.eclipse.platform.ide"]
             }
           ]
         },
@@ -761,19 +686,18 @@
             "modifiers": ["control"]
           }],
           "conditions": [{
-              "type": "frontmost_application_if",
-              "bundle_identifiers": ["org.eclipse.platform.ide"]
-            },
-            {
               "type": "variable_if",
               "name": "mightythumb_l",
               "value": 1
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": ["org.eclipse.platform.ide"]
             }
           ]
         }
       ]
     },
-
     {
       "description": "英数 + 1 / 4 = Close / New Tab",
       "manipulators": [{
@@ -808,7 +732,6 @@
         }
       ]
     },
-
     {
       "description": "英数 + Tab = Enter",
       "manipulators": [{
@@ -826,7 +749,6 @@
         }]
       }]
     },
-
     {
       "description": "英数 + Control + A / D = Browser Back / Forward",
       "manipulators": [{
@@ -867,7 +789,6 @@
         }
       ]
     },
-
     {
       "description": "英数 + Control = Numpad Mode (Space=0 NM,=123 JKL=456 UIO=789)",
       "manipulators": [{
@@ -1110,7 +1031,6 @@
         }
       ]
     },
-
     {
       "description": "[EXTRA] Shift + Space = Underscore",
       "manipulators": [{
@@ -1132,7 +1052,6 @@
         }]
       }]
     },
-
     {
       "description": "Touchpad + J = Left Click (Multitouch-Extension required)",
       "manipulators": [{
@@ -1140,9 +1059,7 @@
         "from": {
           "key_code": "j",
           "modifiers": {
-            "optional": [
-              "any"
-            ]
+            "optional": ["any"]
           }
         },
         "to": [{
@@ -1160,7 +1077,6 @@
         ]
       }]
     },
-
     {
       "description": "Touchpad + K = Right Click (Multitouch-Extension required)",
       "manipulators": [{
@@ -1168,9 +1084,7 @@
         "from": {
           "key_code": "k",
           "modifiers": {
-            "optional": [
-              "any"
-            ]
+            "optional": ["any"]
           }
         },
         "to": [{
@@ -1188,7 +1102,6 @@
         ]
       }]
     },
-
     {
       "description": "Touchpad + L = Middle Click (Multitouch-Extension required)",
       "manipulators": [{
@@ -1196,9 +1109,7 @@
         "from": {
           "key_code": "l",
           "modifiers": {
-            "optional": [
-              "any"
-            ]
+            "optional": ["any"]
           }
         },
         "to": [{
@@ -1216,7 +1127,6 @@
         ]
       }]
     },
-
     {
       "description": "Touchpad + U / O = Previous / Next Tab (Multitouch-Extension required)",
       "manipulators": [{
@@ -1224,17 +1134,12 @@
           "from": {
             "key_code": "u",
             "modifiers": {
-              "optional": [
-                "any"
-              ]
+              "optional": ["any"]
             }
           },
           "to": [{
             "key_code": "tab",
-            "modifiers": [
-              "control",
-              "shift"
-            ]
+            "modifiers": ["control", "shift"]
           }],
           "conditions": [{
               "type": "variable_unless",
@@ -1255,16 +1160,12 @@
           "from": {
             "key_code": "o",
             "modifiers": {
-              "optional": [
-                "any"
-              ]
+              "optional": ["any"]
             }
           },
           "to": [{
             "key_code": "tab",
-            "modifiers": [
-              "control"
-            ]
+            "modifiers": ["control"]
           }],
           "conditions": [{
               "type": "variable_unless",
@@ -1282,7 +1183,6 @@
         }
       ]
     },
-
     {
       "description": "Touchpad + U / O = Previous / Next Tab (Eclipse) (Multitouch-Extension required)",
       "manipulators": [{
@@ -1290,16 +1190,12 @@
           "from": {
             "key_code": "u",
             "modifiers": {
-              "optional": [
-                "any"
-              ]
+              "optional": ["any"]
             }
           },
           "to": [{
             "key_code": "page_up",
-            "modifiers": [
-              "control"
-            ]
+            "modifiers": ["control"]
           }],
           "conditions": [{
               "type": "variable_unless",
@@ -1317,16 +1213,12 @@
           "from": {
             "key_code": "o",
             "modifiers": {
-              "optional": [
-                "any"
-              ]
+              "optional": ["any"]
             }
           },
           "to": [{
             "key_code": "page_down",
-            "modifiers": [
-              "control"
-            ]
+            "modifiers": ["control"]
           }],
           "conditions": [{
               "type": "variable_unless",
@@ -1341,7 +1233,6 @@
         }
       ]
     },
-
     {
       "description": "Touchpad + M / I = Close / New Tab (Multitouch-Extension required)",
       "manipulators": [{
@@ -1349,16 +1240,12 @@
           "from": {
             "key_code": "m",
             "modifiers": {
-              "optional": [
-                "any"
-              ]
+              "optional": ["any"]
             }
           },
           "to": [{
             "key_code": "w",
-            "modifiers": [
-              "command"
-            ]
+            "modifiers": ["command"]
           }],
           "conditions": [{
               "type": "variable_unless",
@@ -1376,16 +1263,12 @@
           "from": {
             "key_code": "i",
             "modifiers": {
-              "optional": [
-                "any"
-              ]
+              "optional": ["any"]
             }
           },
           "to": [{
             "key_code": "t",
-            "modifiers": [
-              "command"
-            ]
+            "modifiers": ["command"]
           }],
           "conditions": [{
               "type": "variable_unless",
@@ -1400,6 +1283,5 @@
         }
       ]
     }
-
   ]
 }
