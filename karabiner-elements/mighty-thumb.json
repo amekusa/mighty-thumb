@@ -1,540 +1,740 @@
 {
   "title": "Mighty Thumb",
-  "rules": [{
+  "rules": [
+    {
       "description": "Use 英数 as an extra modifier key (Required)",
-      "manipulators": [{
-        "type": "basic",
-        "from": {
-          "key_code": "japanese_eisuu",
-          "modifiers": {
-            "optional": ["any"]
-          }
-        },
-        "to": [{
-          "set_variable": {
-            "name": "mightythumb_l",
-            "value": 1
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "japanese_eisuu",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
-          "lazy": true
-        }],
-        "to_after_key_up": [{
-          "set_variable": {
-            "name": "mightythumb_l",
-            "value": 0
-          }
-        }],
-        "to_if_alone": [{
-          "key_code": "japanese_eisuu"
-        }]
-      }]
+          "to": [
+            {
+              "set_variable": {
+                "name": "mightythumb_l",
+                "value": 1
+              },
+              "lazy": true
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "mightythumb_l",
+                "value": 0
+              }
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "japanese_eisuu"
+            }
+          ]
+        }
+      ]
     },
     {
       "description": "Use かな as ALT modifier key",
-      "manipulators": [{
-        "type": "basic",
-        "from": {
-          "key_code": "japanese_kana",
-          "modifiers": {
-            "optional": ["any"]
-          }
-        },
-        "to": [{
-          "key_code": "left_option",
-          "lazy": true
-        }],
-        "to_if_alone": [{
-          "key_code": "japanese_kana"
-        }]
-      }]
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "japanese_kana",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_option",
+              "lazy": true
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "japanese_kana"
+            }
+          ]
+        }
+      ]
     },
     {
       "description": "英数 + E / D / S / F = Up / Down / Left / Right",
-      "manipulators": [{
+      "manipulators": [
+        {
           "type": "basic",
           "from": {
             "key_code": "e"
           },
-          "to": [{
-            "key_code": "up_arrow"
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "up_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "d"
           },
-          "to": [{
-            "key_code": "down_arrow"
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "down_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "s"
           },
-          "to": [{
-            "key_code": "left_arrow"
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "left_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "f"
           },
-          "to": [{
-            "key_code": "right_arrow"
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "right_arrow"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         }
       ]
     },
     {
       "description": "英数 + W / R = Page Up / Down",
-      "manipulators": [{
+      "manipulators": [
+        {
           "type": "basic",
           "from": {
             "key_code": "w"
           },
-          "to": [{
-            "key_code": "page_up"
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "page_up"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "r"
           },
-          "to": [{
-            "key_code": "page_down"
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "page_down"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         }
       ]
     },
     {
       "description": "英数 + A / G = Previous / Next Word",
-      "manipulators": [{
+      "manipulators": [
+        {
           "type": "basic",
           "from": {
             "key_code": "a"
           },
-          "to": [{
-            "key_code": "left_arrow",
-            "modifiers": ["option"]
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": [
+                "option"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "g"
           },
-          "to": [{
-            "key_code": "right_arrow",
-            "modifiers": ["option"]
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "option"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         }
       ]
     },
     {
       "description": "英数 + Q / T = Beginning / End of Line",
-      "manipulators": [{
+      "manipulators": [
+        {
           "type": "basic",
           "from": {
             "key_code": "q"
           },
-          "to": [{
-            "key_code": "left_arrow",
-            "modifiers": ["command"]
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "t"
           },
-          "to": [{
-            "key_code": "right_arrow",
-            "modifiers": ["command"]
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         }
       ]
     },
     {
       "description": "英数 + I / K / J / L = Select Text",
-      "manipulators": [{
+      "manipulators": [
+        {
           "type": "basic",
           "from": {
             "key_code": "i"
           },
-          "to": [{
-            "key_code": "up_arrow",
-            "modifiers": ["shift"]
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "up_arrow",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "k"
           },
-          "to": [{
-            "key_code": "down_arrow",
-            "modifiers": ["shift"]
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "down_arrow",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "j"
           },
-          "to": [{
-            "key_code": "left_arrow",
-            "modifiers": ["shift"]
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "l"
           },
-          "to": [{
-            "key_code": "right_arrow",
-            "modifiers": ["shift"]
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         }
       ]
     },
     {
       "description": "英数 + U / O = Unindent / Indent",
-      "manipulators": [{
+      "manipulators": [
+        {
           "type": "basic",
           "from": {
             "key_code": "u"
           },
-          "to": [{
-            "key_code": "tab",
-            "modifiers": ["shift"]
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "o"
           },
-          "to": [{
-            "key_code": "tab"
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "tab"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         }
       ]
     },
     {
       "description": "英数 + H / N = Backward / Forward Delete",
-      "manipulators": [{
+      "manipulators": [
+        {
           "type": "basic",
           "from": {
             "key_code": "h"
           },
-          "to": [{
-            "key_code": "delete_or_backspace"
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "n"
           },
-          "to": [{
-            "key_code": "delete_or_backspace",
-            "modifiers": ["fn"]
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": [
+                "fn"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         }
       ]
     },
     {
       "description": "英数 + Z / X / C / V = Undo / Cut / Copy / Paste",
-      "manipulators": [{
+      "manipulators": [
+        {
           "type": "basic",
           "from": {
             "key_code": "z"
           },
-          "to": [{
-            "key_code": "z",
-            "modifiers": ["command"]
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "z",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "x"
           },
-          "to": [{
-            "key_code": "x",
-            "modifiers": ["command"]
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "x",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "c"
           },
-          "to": [{
-            "key_code": "c",
-            "modifiers": ["command"]
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "c",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "v"
           },
-          "to": [{
-            "key_code": "v",
-            "modifiers": ["command"]
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "v",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         }
       ]
     },
     {
       "description": "英数 + M = Delete Line (Atom)",
-      "manipulators": [{
-        "type": "basic",
-        "from": {
-          "key_code": "m"
-        },
-        "to": [{
-          "key_code": "k",
-          "modifiers": ["control", "shift"]
-        }],
-        "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          },
-          {
-            "type": "frontmost_application_if",
-            "bundle_identifiers": ["com.github.atom"]
-          }
-        ]
-      }]
-    },
-    {
-      "description": "英数 + M = Delete Line (VSCode)",
-      "manipulators": [{
-        "type": "basic",
-        "from": {
-          "key_code": "m"
-        },
-        "to": [{
-          "key_code": "k",
-          "modifiers": ["command", "shift"]
-        }],
-        "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          },
-          {
-            "type": "frontmost_application_if",
-            "bundle_identifiers": ["com.microsoft.VSCode"]
-          }
-        ]
-      }]
-    },
-    {
-      "description": "英数 + M = Delete Line (Eclipse)",
-      "manipulators": [{
-        "type": "basic",
-        "from": {
-          "key_code": "m"
-        },
-        "to": [{
-          "key_code": "d",
-          "modifiers": ["command"]
-        }],
-        "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          },
-          {
-            "type": "frontmost_application_if",
-            "bundle_identifiers": ["org.eclipse.platform.ide"]
-          }
-        ]
-      }]
-    },
-    {
-      "description": "英数 + Enter = New Line Below (Atom, VSCode)",
-      "manipulators": [{
-        "type": "basic",
-        "from": {
-          "key_code": "return_or_enter"
-        },
-        "to": [{
-          "key_code": "return_or_enter",
-          "modifiers": ["command"]
-        }],
-        "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          },
-          {
-            "type": "frontmost_application_if",
-            "bundle_identifiers": ["com.github.atom", "com.microsoft.VSCode"]
-          }
-        ]
-      }]
-    },
-    {
-      "description": "英数 + Enter = New Line Below (Eclipse)",
-      "manipulators": [{
-        "type": "basic",
-        "from": {
-          "key_code": "return_or_enter"
-        },
-        "to": [{
-          "key_code": "return_or_enter",
-          "modifiers": ["shift"]
-        }],
-        "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          },
-          {
-            "type": "frontmost_application_if",
-            "bundle_identifiers": ["org.eclipse.platform.ide"]
-          }
-        ]
-      }]
-    },
-    {
-      "description": "英数 + , / . = Move Line Up / Down (Atom)",
-      "manipulators": [{
+      "manipulators": [
+        {
           "type": "basic",
           "from": {
-            "key_code": "comma"
+            "key_code": "m"
           },
-          "to": [{
-            "key_code": "up_arrow",
-            "modifiers": ["command", "control"]
-          }],
-          "conditions": [{
+          "to": [
+            {
+              "key_code": "k",
+              "modifiers": [
+                "control",
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
               "type": "variable_if",
               "name": "mightythumb_l",
               "value": 1
             },
             {
               "type": "frontmost_application_if",
-              "bundle_identifiers": ["com.github.atom"]
+              "bundle_identifiers": [
+                "com.github.atom"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "英数 + M = Delete Line (VSCode)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "m"
+          },
+          "to": [
+            {
+              "key_code": "k",
+              "modifiers": [
+                "command",
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "英数 + M = Delete Line (Eclipse)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "m"
+          },
+          "to": [
+            {
+              "key_code": "d",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "org.eclipse.platform.ide"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "英数 + Enter = New Line Below (Atom, VSCode)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "return_or_enter"
+          },
+          "to": [
+            {
+              "key_code": "return_or_enter",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.github.atom",
+                "com.microsoft.VSCode"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "英数 + Enter = New Line Below (Eclipse)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "return_or_enter"
+          },
+          "to": [
+            {
+              "key_code": "return_or_enter",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "org.eclipse.platform.ide"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "英数 + , / . = Move Line Up / Down (Atom)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "comma"
+          },
+          "to": [
+            {
+              "key_code": "up_arrow",
+              "modifiers": [
+                "command",
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.github.atom"
+              ]
             }
           ]
         },
@@ -543,18 +743,26 @@
           "from": {
             "key_code": "period"
           },
-          "to": [{
-            "key_code": "down_arrow",
-            "modifiers": ["command", "control"]
-          }],
-          "conditions": [{
+          "to": [
+            {
+              "key_code": "down_arrow",
+              "modifiers": [
+                "command",
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
               "type": "variable_if",
               "name": "mightythumb_l",
               "value": 1
             },
             {
               "type": "frontmost_application_if",
-              "bundle_identifiers": ["com.github.atom"]
+              "bundle_identifiers": [
+                "com.github.atom"
+              ]
             }
           ]
         }
@@ -562,16 +770,22 @@
     },
     {
       "description": "英数 + , / . = Move Line Up / Down (VSCode, Eclipse)",
-      "manipulators": [{
+      "manipulators": [
+        {
           "type": "basic",
           "from": {
             "key_code": "comma"
           },
-          "to": [{
-            "key_code": "up_arrow",
-            "modifiers": ["option"]
-          }],
-          "conditions": [{
+          "to": [
+            {
+              "key_code": "up_arrow",
+              "modifiers": [
+                "option"
+              ]
+            }
+          ],
+          "conditions": [
+            {
               "type": "variable_if",
               "name": "mightythumb_l",
               "value": 1
@@ -590,11 +804,16 @@
           "from": {
             "key_code": "period"
           },
-          "to": [{
-            "key_code": "down_arrow",
-            "modifiers": ["option"]
-          }],
-          "conditions": [{
+          "to": [
+            {
+              "key_code": "down_arrow",
+              "modifiers": [
+                "option"
+              ]
+            }
+          ],
+          "conditions": [
+            {
               "type": "variable_if",
               "name": "mightythumb_l",
               "value": 1
@@ -612,23 +831,32 @@
     },
     {
       "description": "英数 + 2 / 3 = Previous / Next Tab",
-      "manipulators": [{
+      "manipulators": [
+        {
           "type": "basic",
           "from": {
             "key_code": "2"
           },
-          "to": [{
-            "key_code": "tab",
-            "modifiers": ["control", "shift"]
-          }],
-          "conditions": [{
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": [
+                "control",
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
               "type": "variable_if",
               "name": "mightythumb_l",
               "value": 1
             },
             {
               "type": "frontmost_application_unless",
-              "bundle_identifiers": ["org.eclipse.platform.ide"]
+              "bundle_identifiers": [
+                "org.eclipse.platform.ide"
+              ]
             }
           ]
         },
@@ -637,18 +865,25 @@
           "from": {
             "key_code": "3"
           },
-          "to": [{
-            "key_code": "tab",
-            "modifiers": ["control"]
-          }],
-          "conditions": [{
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": [
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
               "type": "variable_if",
               "name": "mightythumb_l",
               "value": 1
             },
             {
               "type": "frontmost_application_unless",
-              "bundle_identifiers": ["org.eclipse.platform.ide"]
+              "bundle_identifiers": [
+                "org.eclipse.platform.ide"
+              ]
             }
           ]
         }
@@ -656,23 +891,31 @@
     },
     {
       "description": "英数 + 2 / 3 = Previous / Next Tab (Eclipse)",
-      "manipulators": [{
+      "manipulators": [
+        {
           "type": "basic",
           "from": {
             "key_code": "2"
           },
-          "to": [{
-            "key_code": "page_up",
-            "modifiers": ["control"]
-          }],
-          "conditions": [{
+          "to": [
+            {
+              "key_code": "page_up",
+              "modifiers": [
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
               "type": "variable_if",
               "name": "mightythumb_l",
               "value": 1
             },
             {
               "type": "frontmost_application_if",
-              "bundle_identifiers": ["org.eclipse.platform.ide"]
+              "bundle_identifiers": [
+                "org.eclipse.platform.ide"
+              ]
             }
           ]
         },
@@ -681,18 +924,25 @@
           "from": {
             "key_code": "3"
           },
-          "to": [{
-            "key_code": "page_down",
-            "modifiers": ["control"]
-          }],
-          "conditions": [{
+          "to": [
+            {
+              "key_code": "page_down",
+              "modifiers": [
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
               "type": "variable_if",
               "name": "mightythumb_l",
               "value": 1
             },
             {
               "type": "frontmost_application_if",
-              "bundle_identifiers": ["org.eclipse.platform.ide"]
+              "bundle_identifiers": [
+                "org.eclipse.platform.ide"
+              ]
             }
           ]
         }
@@ -700,448 +950,615 @@
     },
     {
       "description": "英数 + 1 / 4 = Close / New Tab",
-      "manipulators": [{
+      "manipulators": [
+        {
           "type": "basic",
           "from": {
             "key_code": "1"
           },
-          "to": [{
-            "key_code": "w",
-            "modifiers": ["command"]
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "w",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "4"
           },
-          "to": [{
-            "key_code": "t",
-            "modifiers": ["command"]
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "t",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         }
       ]
     },
     {
       "description": "英数 + Tab = Enter",
-      "manipulators": [{
-        "type": "basic",
-        "from": {
-          "key_code": "tab"
-        },
-        "to": [{
-          "key_code": "return_or_enter"
-        }],
-        "conditions": [{
-          "type": "variable_if",
-          "name": "mightythumb_l",
-          "value": 1
-        }]
-      }]
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "tab"
+          },
+          "to": [
+            {
+              "key_code": "return_or_enter"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
+        }
+      ]
     },
     {
       "description": "英数 + Control + A / D = Browser Back / Forward",
-      "manipulators": [{
+      "manipulators": [
+        {
           "type": "basic",
           "from": {
             "key_code": "a",
             "modifiers": {
-              "mandatory": ["control"]
+              "mandatory": [
+                "control"
+              ]
             }
           },
-          "to": [{
-            "key_code": "left_arrow",
-            "modifiers": ["command"]
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "d",
             "modifiers": {
-              "mandatory": ["control"]
+              "mandatory": [
+                "control"
+              ]
             }
           },
-          "to": [{
-            "key_code": "right_arrow",
-            "modifiers": ["command"]
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         }
       ]
     },
     {
       "description": "英数 + Control = Numpad Mode (Space=0 NM,=123 JKL=456 UIO=789)",
-      "manipulators": [{
+      "manipulators": [
+        {
           "type": "basic",
           "from": {
             "key_code": "spacebar",
             "modifiers": {
-              "mandatory": ["control"]
+              "mandatory": [
+                "control"
+              ]
             }
           },
-          "to": [{
-            "key_code": "keypad_0"
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "keypad_0"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "n",
             "modifiers": {
-              "mandatory": ["control"]
+              "mandatory": [
+                "control"
+              ]
             }
           },
-          "to": [{
-            "key_code": "keypad_1"
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "keypad_1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "m",
             "modifiers": {
-              "mandatory": ["control"]
+              "mandatory": [
+                "control"
+              ]
             }
           },
-          "to": [{
-            "key_code": "keypad_2"
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "keypad_2"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "comma",
             "modifiers": {
-              "mandatory": ["control"]
+              "mandatory": [
+                "control"
+              ]
             }
           },
-          "to": [{
-            "key_code": "keypad_3"
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "keypad_3"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "j",
             "modifiers": {
-              "mandatory": ["control"]
+              "mandatory": [
+                "control"
+              ]
             }
           },
-          "to": [{
-            "key_code": "keypad_4"
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "keypad_4"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "k",
             "modifiers": {
-              "mandatory": ["control"]
+              "mandatory": [
+                "control"
+              ]
             }
           },
-          "to": [{
-            "key_code": "keypad_5"
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "keypad_5"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "l",
             "modifiers": {
-              "mandatory": ["control"]
+              "mandatory": [
+                "control"
+              ]
             }
           },
-          "to": [{
-            "key_code": "keypad_6"
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "keypad_6"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "u",
             "modifiers": {
-              "mandatory": ["control"]
+              "mandatory": [
+                "control"
+              ]
             }
           },
-          "to": [{
-            "key_code": "keypad_7"
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "keypad_7"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "i",
             "modifiers": {
-              "mandatory": ["control"]
+              "mandatory": [
+                "control"
+              ]
             }
           },
-          "to": [{
-            "key_code": "keypad_8"
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "keypad_8"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "o",
             "modifiers": {
-              "mandatory": ["control"]
+              "mandatory": [
+                "control"
+              ]
             }
           },
-          "to": [{
-            "key_code": "keypad_9"
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "keypad_9"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "semicolon",
             "modifiers": {
-              "mandatory": ["control"]
+              "mandatory": [
+                "control"
+              ]
             }
           },
-          "to": [{
-            "key_code": "keypad_plus"
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "keypad_plus"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "p",
             "modifiers": {
-              "mandatory": ["control"]
+              "mandatory": [
+                "control"
+              ]
             }
           },
-          "to": [{
-            "key_code": "keypad_hyphen"
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "keypad_hyphen"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "9",
             "modifiers": {
-              "mandatory": ["control"]
+              "mandatory": [
+                "control"
+              ]
             }
           },
-          "to": [{
-            "key_code": "keypad_asterisk"
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "keypad_asterisk"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         },
         {
           "type": "basic",
           "from": {
             "key_code": "8",
             "modifiers": {
-              "mandatory": ["control"]
+              "mandatory": [
+                "control"
+              ]
             }
           },
-          "to": [{
-            "key_code": "keypad_slash"
-          }],
-          "conditions": [{
-            "type": "variable_if",
-            "name": "mightythumb_l",
-            "value": 1
-          }]
+          "to": [
+            {
+              "key_code": "keypad_slash"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
         }
       ]
     },
     {
       "description": "[EXTRA] Shift + Space = Underscore",
-      "manipulators": [{
-        "type": "basic",
-        "from": {
-          "key_code": "spacebar",
-          "modifiers": {
-            "mandatory": ["shift"]
-          }
-        },
-        "to": [{
-          "key_code": "international1"
-        }],
-        "conditions": [{
-          "type": "input_source_if",
-          "input_sources": [{
-            "language": "en"
-          }]
-        }]
-      }]
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "mandatory": [
+                "shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "international1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "input_source_if",
+              "input_sources": [
+                {
+                  "language": "en"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "description": "Touchpad + J = Left Click (Multitouch-Extension required)",
-      "manipulators": [{
-        "type": "basic",
-        "from": {
-          "key_code": "j",
-          "modifiers": {
-            "optional": ["any"]
-          }
-        },
-        "to": [{
-          "pointing_button": "button1"
-        }],
-        "conditions": [{
-            "type": "variable_unless",
-            "name": "multitouch_extension_finger_count_total",
-            "value": 0
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
-          {
-            "type": "frontmost_application_unless",
-            "bundle_identifiers": ["com.apple.loginwindow"]
-          }
-        ]
-      }]
+          "to": [
+            {
+              "pointing_button": "button1"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 0
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "com.apple.loginwindow"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "description": "Touchpad + K = Right Click (Multitouch-Extension required)",
-      "manipulators": [{
-        "type": "basic",
-        "from": {
-          "key_code": "k",
-          "modifiers": {
-            "optional": ["any"]
-          }
-        },
-        "to": [{
-          "pointing_button": "button2"
-        }],
-        "conditions": [{
-            "type": "variable_unless",
-            "name": "multitouch_extension_finger_count_total",
-            "value": 0
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
-          {
-            "type": "frontmost_application_unless",
-            "bundle_identifiers": ["com.apple.loginwindow"]
-          }
-        ]
-      }]
+          "to": [
+            {
+              "pointing_button": "button2"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 0
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "com.apple.loginwindow"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "description": "Touchpad + L = Middle Click (Multitouch-Extension required)",
-      "manipulators": [{
-        "type": "basic",
-        "from": {
-          "key_code": "l",
-          "modifiers": {
-            "optional": ["any"]
-          }
-        },
-        "to": [{
-          "pointing_button": "button3"
-        }],
-        "conditions": [{
-            "type": "variable_unless",
-            "name": "multitouch_extension_finger_count_total",
-            "value": 0
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
-          {
-            "type": "frontmost_application_unless",
-            "bundle_identifiers": ["com.apple.loginwindow"]
-          }
-        ]
-      }]
+          "to": [
+            {
+              "pointing_button": "button3"
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 0
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "com.apple.loginwindow"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "description": "Touchpad + U / O = Previous / Next Tab (Multitouch-Extension required)",
-      "manipulators": [{
+      "manipulators": [
+        {
           "type": "basic",
           "from": {
             "key_code": "u",
             "modifiers": {
-              "optional": ["any"]
+              "optional": [
+                "any"
+              ]
             }
           },
-          "to": [{
-            "key_code": "tab",
-            "modifiers": ["control", "shift"]
-          }],
-          "conditions": [{
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": [
+                "control",
+                "shift"
+              ]
+            }
+          ],
+          "conditions": [
+            {
               "type": "variable_unless",
               "name": "multitouch_extension_finger_count_total",
               "value": 0
@@ -1160,14 +1577,21 @@
           "from": {
             "key_code": "o",
             "modifiers": {
-              "optional": ["any"]
+              "optional": [
+                "any"
+              ]
             }
           },
-          "to": [{
-            "key_code": "tab",
-            "modifiers": ["control"]
-          }],
-          "conditions": [{
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": [
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
               "type": "variable_unless",
               "name": "multitouch_extension_finger_count_total",
               "value": 0
@@ -1185,26 +1609,36 @@
     },
     {
       "description": "Touchpad + U / O = Previous / Next Tab (Eclipse) (Multitouch-Extension required)",
-      "manipulators": [{
+      "manipulators": [
+        {
           "type": "basic",
           "from": {
             "key_code": "u",
             "modifiers": {
-              "optional": ["any"]
+              "optional": [
+                "any"
+              ]
             }
           },
-          "to": [{
-            "key_code": "page_up",
-            "modifiers": ["control"]
-          }],
-          "conditions": [{
+          "to": [
+            {
+              "key_code": "page_up",
+              "modifiers": [
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
               "type": "variable_unless",
               "name": "multitouch_extension_finger_count_total",
               "value": 0
             },
             {
               "type": "frontmost_application_if",
-              "bundle_identifiers": ["org.eclipse.platform.ide"]
+              "bundle_identifiers": [
+                "org.eclipse.platform.ide"
+              ]
             }
           ]
         },
@@ -1213,21 +1647,30 @@
           "from": {
             "key_code": "o",
             "modifiers": {
-              "optional": ["any"]
+              "optional": [
+                "any"
+              ]
             }
           },
-          "to": [{
-            "key_code": "page_down",
-            "modifiers": ["control"]
-          }],
-          "conditions": [{
+          "to": [
+            {
+              "key_code": "page_down",
+              "modifiers": [
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
               "type": "variable_unless",
               "name": "multitouch_extension_finger_count_total",
               "value": 0
             },
             {
               "type": "frontmost_application_if",
-              "bundle_identifiers": ["org.eclipse.platform.ide"]
+              "bundle_identifiers": [
+                "org.eclipse.platform.ide"
+              ]
             }
           ]
         }
@@ -1235,26 +1678,36 @@
     },
     {
       "description": "Touchpad + M / I = Close / New Tab (Multitouch-Extension required)",
-      "manipulators": [{
+      "manipulators": [
+        {
           "type": "basic",
           "from": {
             "key_code": "m",
             "modifiers": {
-              "optional": ["any"]
+              "optional": [
+                "any"
+              ]
             }
           },
-          "to": [{
-            "key_code": "w",
-            "modifiers": ["command"]
-          }],
-          "conditions": [{
+          "to": [
+            {
+              "key_code": "w",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
               "type": "variable_unless",
               "name": "multitouch_extension_finger_count_total",
               "value": 0
             },
             {
               "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.apple.loginwindow"]
+              "bundle_identifiers": [
+                "com.apple.loginwindow"
+              ]
             }
           ]
         },
@@ -1263,21 +1716,30 @@
           "from": {
             "key_code": "i",
             "modifiers": {
-              "optional": ["any"]
+              "optional": [
+                "any"
+              ]
             }
           },
-          "to": [{
-            "key_code": "t",
-            "modifiers": ["command"]
-          }],
-          "conditions": [{
+          "to": [
+            {
+              "key_code": "t",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
               "type": "variable_unless",
               "name": "multitouch_extension_finger_count_total",
               "value": 0
             },
             {
               "type": "frontmost_application_unless",
-              "bundle_identifiers": ["com.apple.loginwindow"]
+              "bundle_identifiers": [
+                "com.apple.loginwindow"
+              ]
             }
           ]
         }
