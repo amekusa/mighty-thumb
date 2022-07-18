@@ -72,7 +72,12 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "e"
+            "key_code": "e",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
@@ -90,7 +95,12 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "d"
+            "key_code": "d",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
@@ -108,7 +118,12 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "s"
+            "key_code": "s",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {
@@ -126,7 +141,12 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "f"
+            "key_code": "f",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
           },
           "to": [
             {

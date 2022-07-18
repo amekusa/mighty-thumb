@@ -33,19 +33,19 @@ let left_thumb = if_var('mightythumb_l', 1);
 rules.add('英数 + E / D / S / F = Up / Down / Left / Right')
   .cond(left_thumb)
   .remap({
-    from: key('e'),
+    from: key('e', { optional: 'any' }),
     to:   key('up_arrow')
   })
   .remap({
-    from: key('d'),
+    from: key('d', { optional: 'any' }),
     to:   key('down_arrow')
   })
   .remap({
-    from: key('s'),
+    from: key('s', { optional: 'any' }),
     to:   key('left_arrow')
   })
   .remap({
-    from: key('f'),
+    from: key('f', { optional: 'any' }),
     to:   key('right_arrow')
   });
 
