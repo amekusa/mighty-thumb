@@ -1242,12 +1242,12 @@
       ]
     },
     {
-      "description": "英数 + Control + A / D = Browser Back / Forward",
+      "description": "英数 + Control + Q / W = Browser Back / Forward",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "a",
+            "key_code": "q",
             "modifiers": {
               "mandatory": [
                 "control"
@@ -1273,7 +1273,7 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "d",
+            "key_code": "w",
             "modifiers": {
               "mandatory": [
                 "control"

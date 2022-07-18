@@ -286,14 +286,14 @@ rules.add('英数 + Tab = Enter')
     to:   key('return_or_enter')
   });
 
-rules.add('英数 + Control + A / D = Browser Back / Forward')
+rules.add('英数 + Control + Q / W = Browser Back / Forward')
   .cond(left_thumb)
   .remap({
-    from: key('a', 'control'),
+    from: key('q', 'control'),
     to:   key('left_arrow', 'command')
   })
   .remap({
-    from: key('d', 'control'),
+    from: key('w', 'control'),
     to:   key('right_arrow', 'command')
   });
 
