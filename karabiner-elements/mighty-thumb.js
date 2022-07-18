@@ -62,6 +62,7 @@ rules.add('英数 + W / R = Page Up / Down')
 
 rules.add('英数 + A / G = Previous / Next Word')
   .cond(left_thumb)
+  .cond(unless_app(apps.sonicpi))
   .remap({
     from: key('a'),
     to:   key('left_arrow', 'option')
@@ -69,6 +70,18 @@ rules.add('英数 + A / G = Previous / Next Word')
   .remap({
     from: key('g'),
     to:   key('right_arrow', 'option')
+  });
+
+rules.add('英数 + A / G = Previous / Next Word (Sonic Pi)')
+  .cond(left_thumb)
+  .cond(if_app(apps.sonicpi))
+  .remap({
+    from: key('a'),
+    to:   key('b', 'command')
+  })
+  .remap({
+    from: key('g'),
+    to:   key('f', 'command')
   });
 
 rules.add('英数 + Q / T = Beginning / End of Line')
@@ -217,6 +230,18 @@ rules.add('英数 + , / . = Move Line Up / Down (VSCode, Eclipse)')
   .remap({
     from: key('period'),
     to:   key('down_arrow', 'option')
+  });
+
+rules.add('英数 + , / . = Move Line Up / Down (Sonic Pi)')
+  .cond(left_thumb)
+  .cond(if_app(apps.sonicpi))
+  .remap({
+    from: key('comma'),
+    to:   key('p', ['command', 'control'])
+  })
+  .remap({
+    from: key('period'),
+    to:   key('n', ['command', 'control'])
   });
 
 rules.add('英数 + 2 / 3 = Previous / Next Tab')

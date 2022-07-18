@@ -205,6 +205,12 @@
               "type": "variable_if",
               "name": "mightythumb_l",
               "value": 1
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "net.sonic-pi.app"
+              ]
             }
           ]
         },
@@ -226,6 +232,71 @@
               "type": "variable_if",
               "name": "mightythumb_l",
               "value": 1
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "net.sonic-pi.app"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "英数 + A / G = Previous / Next Word (Sonic Pi)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "a"
+          },
+          "to": [
+            {
+              "key_code": "b",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "net.sonic-pi.app"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "g"
+          },
+          "to": [
+            {
+              "key_code": "f",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "net.sonic-pi.app"
+              ]
             }
           ]
         }
@@ -894,6 +965,67 @@
               "bundle_identifiers": [
                 "com.microsoft.VSCode",
                 "org.eclipse.platform.ide"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "英数 + , / . = Move Line Up / Down (Sonic Pi)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "comma"
+          },
+          "to": [
+            {
+              "key_code": "p",
+              "modifiers": [
+                "command",
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "net.sonic-pi.app"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "period"
+          },
+          "to": [
+            {
+              "key_code": "n",
+              "modifiers": [
+                "command",
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "net.sonic-pi.app"
               ]
             }
           ]
