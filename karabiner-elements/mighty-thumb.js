@@ -73,7 +73,7 @@ rules.add('英数 + A / G = Previous / Next Word')
 
 rules.add('英数 + Q / T = Beginning / End of Line')
   .cond(left_thumb)
-  // .cond(unless_app(apps.sonicpi))
+  .cond(unless_app(apps.sonicpi))
   .remap({
     from: key('q'),
     to:   key('left_arrow', 'command')
@@ -81,6 +81,18 @@ rules.add('英数 + Q / T = Beginning / End of Line')
   .remap({
     from: key('t'),
     to:   key('right_arrow', 'command')
+  });
+
+rules.add('英数 + Q / T = Beginning / End of Line (Sonic Pi)')
+  .cond(left_thumb)
+  .cond(if_app(apps.sonicpi))
+  .remap({
+    from: key('q'),
+    to:   key('a', 'control')
+  })
+  .remap({
+    from: key('t'),
+    to:   key('e', 'control')
   });
 
 rules.add('英数 + I / K / J / L = Select Text')

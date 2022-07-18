@@ -252,6 +252,12 @@
               "type": "variable_if",
               "name": "mightythumb_l",
               "value": 1
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "net.sonic-pi.app"
+              ]
             }
           ]
         },
@@ -273,6 +279,71 @@
               "type": "variable_if",
               "name": "mightythumb_l",
               "value": 1
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
+                "net.sonic-pi.app"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "英数 + Q / T = Beginning / End of Line (Sonic Pi)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "q"
+          },
+          "to": [
+            {
+              "key_code": "a",
+              "modifiers": [
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "net.sonic-pi.app"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "t"
+          },
+          "to": [
+            {
+              "key_code": "e",
+              "modifiers": [
+                "control"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "net.sonic-pi.app"
+              ]
             }
           ]
         }
