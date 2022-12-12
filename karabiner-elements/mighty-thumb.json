@@ -1078,6 +1078,12 @@
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
+                "com.microsoft.VSCode"
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
                 "org.eclipse.platform.ide"
               ]
             }
@@ -1105,7 +1111,74 @@
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
+                "com.microsoft.VSCode"
+              ]
+            },
+            {
+              "type": "frontmost_application_unless",
+              "bundle_identifiers": [
                 "org.eclipse.platform.ide"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "英数 + 2 / 3 = Previous / Next Tab (VSCode)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "2"
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": [
+                "command",
+                "option"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "3"
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "command",
+                "option"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode"
               ]
             }
           ]

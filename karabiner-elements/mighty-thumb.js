@@ -246,6 +246,7 @@ rules.add('英数 + , / . = Move Line Up / Down (Sonic Pi)')
 
 rules.add('英数 + 2 / 3 = Previous / Next Tab')
   .cond(left_thumb)
+  .cond(unless_app(apps.vscode))
   .cond(unless_app(apps.eclipse))
   .remap({
     from: key('2'),
@@ -254,6 +255,18 @@ rules.add('英数 + 2 / 3 = Previous / Next Tab')
   .remap({
     from: key('3'),
     to:   key('tab', 'control')
+  });
+
+rules.add('英数 + 2 / 3 = Previous / Next Tab (VSCode)')
+  .cond(left_thumb)
+  .cond(if_app(apps.vscode))
+  .remap({
+    from: key('2'),
+    to:   key('left_arrow', ['command', 'option'])
+  })
+  .remap({
+    from: key('3'),
+    to:   key('right_arrow', ['command', 'option'])
   });
 
 rules.add('英数 + 2 / 3 = Previous / Next Tab (Eclipse)')
