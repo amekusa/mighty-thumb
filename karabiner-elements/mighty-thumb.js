@@ -246,8 +246,7 @@ rules.add('英数 + , / . = Move Line Up / Down (Sonic Pi)')
 
 rules.add('英数 + 2 / 3 = Previous / Next Tab')
   .cond(left_thumb)
-  .cond(unless_app(apps.vscode))
-  .cond(unless_app(apps.eclipse))
+  .cond(unless_app(apps.vscode, apps.eclipse))
   .remap({
     from: key('2'),
     to:   key('tab', ['control', 'shift'])

@@ -1078,12 +1078,7 @@
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
-                "com.microsoft.VSCode"
-              ]
-            },
-            {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": [
+                "com.microsoft.VSCode",
                 "org.eclipse.platform.ide"
               ]
             }
@@ -1111,12 +1106,7 @@
             {
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
-                "com.microsoft.VSCode"
-              ]
-            },
-            {
-              "type": "frontmost_application_unless",
-              "bundle_identifiers": [
+                "com.microsoft.VSCode",
                 "org.eclipse.platform.ide"
               ]
             }
