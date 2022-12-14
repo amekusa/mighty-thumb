@@ -406,7 +406,7 @@ rules.add('Touchpad + L = Middle Click (Multitouch-Extension required)')
 
 rules.add('Touchpad + U / O = Previous / Next Tab (Multitouch-Extension required)')
   .cond(touched)
-  .cond(unless_app(apps.login, apps.eclipse))
+  .cond(unless_app(apps.login, apps.vscode, apps.eclipse))
   .remap({
     from: key('u', { optional: 'any' }),
     to:   key('tab', ['control', 'shift'])
@@ -414,6 +414,18 @@ rules.add('Touchpad + U / O = Previous / Next Tab (Multitouch-Extension required
   .remap({
     from: key('o', { optional: 'any' }),
     to:   key('tab', 'control')
+  });
+
+rules.add('Touchpad + U / O = Previous / Next Tab (VSCode) (Multitouch-Extension required)')
+  .cond(touched)
+  .cond(if_app(apps.vscode))
+  .remap({
+    from: key('u', { optional: 'any' }),
+    to:   key('left_arrow', ['command', 'option'])
+  })
+  .remap({
+    from: key('o', { optional: 'any' }),
+    to:   key('right_arrow', ['command', 'option'])
   });
 
 rules.add('Touchpad + U / O = Previous / Next Tab (Eclipse) (Multitouch-Extension required)')

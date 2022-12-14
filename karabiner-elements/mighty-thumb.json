@@ -1863,6 +1863,7 @@
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
                 "com.apple.loginwindow",
+                "com.microsoft.VSCode",
                 "org.eclipse.platform.ide"
               ]
             }
@@ -1896,7 +1897,79 @@
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
                 "com.apple.loginwindow",
+                "com.microsoft.VSCode",
                 "org.eclipse.platform.ide"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Touchpad + U / O = Previous / Next Tab (VSCode) (Multitouch-Extension required)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "u",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": [
+                "command",
+                "option"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 0
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "o",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_arrow",
+              "modifiers": [
+                "command",
+                "option"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_unless",
+              "name": "multitouch_extension_finger_count_total",
+              "value": 0
+            },
+            {
+              "type": "frontmost_application_if",
+              "bundle_identifiers": [
+                "com.microsoft.VSCode"
               ]
             }
           ]
