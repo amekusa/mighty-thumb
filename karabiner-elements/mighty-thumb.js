@@ -6,6 +6,7 @@ let apps = {
   login: 'com.apple.loginwindow',
   atom: 'com.github.atom',
   vscode: 'com.microsoft.VSCode',
+  vscodium: 'com.vscodium',
   eclipse: 'org.eclipse.platform.ide',
   sonicpi: 'net.sonic-pi.app'
 };
@@ -178,7 +179,7 @@ rules.add('英数 + M = Delete Line (Atom)')
 
 rules.add('英数 + M = Delete Line (VSCode)')
   .cond(left_thumb)
-  .cond(if_app(apps.vscode))
+  .cond(if_app(apps.vscode, apps.vscodium))
   .remap({
     from: key('m'),
     to:   key('k', ['command', 'shift'])
@@ -194,7 +195,7 @@ rules.add('英数 + M = Delete Line (Eclipse)')
 
 rules.add('英数 + Enter = New Line Below (Atom, VSCode)')
   .cond(left_thumb)
-  .cond(if_app(apps.atom, apps.vscode))
+  .cond(if_app(apps.atom, apps.vscode, apps.vscodium))
   .remap({
     from: key('return_or_enter'),
     to:   key('return_or_enter', 'command')
@@ -222,7 +223,7 @@ rules.add('英数 + , / . = Move Line Up / Down (Atom)')
 
 rules.add('英数 + , / . = Move Line Up / Down (VSCode, Eclipse)')
   .cond(left_thumb)
-  .cond(if_app(apps.vscode, apps.eclipse))
+  .cond(if_app(apps.vscode, apps.vscodium, apps.eclipse))
   .remap({
     from: key('comma'),
     to:   key('up_arrow', 'option')
@@ -246,7 +247,7 @@ rules.add('英数 + , / . = Move Line Up / Down (Sonic Pi)')
 
 rules.add('英数 + 2 / 3 = Previous / Next Tab')
   .cond(left_thumb)
-  .cond(unless_app(apps.vscode, apps.eclipse))
+  .cond(unless_app(apps.vscode, apps.vscodium, apps.eclipse))
   .remap({
     from: key('2'),
     to:   key('tab', ['control', 'shift'])
@@ -258,7 +259,7 @@ rules.add('英数 + 2 / 3 = Previous / Next Tab')
 
 rules.add('英数 + 2 / 3 = Previous / Next Tab (VSCode)')
   .cond(left_thumb)
-  .cond(if_app(apps.vscode))
+  .cond(if_app(apps.vscode, apps.vscodium))
   .remap({
     from: key('2'),
     to:   key('left_arrow', ['command', 'option'])
@@ -405,7 +406,7 @@ rules.add('Touchpad + L = Middle Click (Multitouch-Extension required)')
 
 rules.add('Touchpad + U / O = Previous / Next Tab (Multitouch-Extension required)')
   .cond(touched)
-  .cond(unless_app(apps.login, apps.vscode, apps.eclipse))
+  .cond(unless_app(apps.login, apps.vscode, apps.vscodium, apps.eclipse))
   .remap({
     from: key('u', { optional: 'any' }),
     to:   key('tab', ['control', 'shift'])
@@ -417,7 +418,7 @@ rules.add('Touchpad + U / O = Previous / Next Tab (Multitouch-Extension required
 
 rules.add('Touchpad + U / O = Previous / Next Tab (VSCode) (Multitouch-Extension required)')
   .cond(touched)
-  .cond(if_app(apps.vscode))
+  .cond(if_app(apps.vscode, apps.vscodium))
   .remap({
     from: key('u', { optional: 'any' }),
     to:   key('left_arrow', ['command', 'option'])

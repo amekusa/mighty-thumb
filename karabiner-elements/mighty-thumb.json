@@ -765,7 +765,8 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.microsoft.VSCode"
+                "com.microsoft.VSCode",
+                "com.vscodium"
               ]
             }
           ]
@@ -830,7 +831,8 @@
               "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "com.github.atom",
-                "com.microsoft.VSCode"
+                "com.microsoft.VSCode",
+                "com.vscodium"
               ]
             }
           ]
@@ -956,6 +958,7 @@
               "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "com.microsoft.VSCode",
+                "com.vscodium",
                 "org.eclipse.platform.ide"
               ]
             }
@@ -984,6 +987,7 @@
               "type": "frontmost_application_if",
               "bundle_identifiers": [
                 "com.microsoft.VSCode",
+                "com.vscodium",
                 "org.eclipse.platform.ide"
               ]
             }
@@ -1079,6 +1083,7 @@
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
                 "com.microsoft.VSCode",
+                "com.vscodium",
                 "org.eclipse.platform.ide"
               ]
             }
@@ -1107,6 +1112,7 @@
               "type": "frontmost_application_unless",
               "bundle_identifiers": [
                 "com.microsoft.VSCode",
+                "com.vscodium",
                 "org.eclipse.platform.ide"
               ]
             }
@@ -1140,7 +1146,8 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.microsoft.VSCode"
+                "com.microsoft.VSCode",
+                "com.vscodium"
               ]
             }
           ]
@@ -1168,7 +1175,8 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.microsoft.VSCode"
+                "com.microsoft.VSCode",
+                "com.vscodium"
               ]
             }
           ]
@@ -1854,6 +1862,7 @@
               "bundle_identifiers": [
                 "com.apple.loginwindow",
                 "com.microsoft.VSCode",
+                "com.vscodium",
                 "org.eclipse.platform.ide"
               ]
             }
@@ -1888,6 +1897,7 @@
               "bundle_identifiers": [
                 "com.apple.loginwindow",
                 "com.microsoft.VSCode",
+                "com.vscodium",
                 "org.eclipse.platform.ide"
               ]
             }
@@ -1926,7 +1936,8 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.microsoft.VSCode"
+                "com.microsoft.VSCode",
+                "com.vscodium"
               ]
             }
           ]
@@ -1959,7 +1970,8 @@
             {
               "type": "frontmost_application_if",
               "bundle_identifiers": [
-                "com.microsoft.VSCode"
+                "com.microsoft.VSCode",
+                "com.vscodium"
               ]
             }
           ]
