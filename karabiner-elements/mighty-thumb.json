@@ -1313,6 +1313,32 @@
       ]
     },
     {
+      "description": "英数 + /(Slash) = \\(Backslash)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "slash"
+          },
+          "to": [
+            {
+              "key_code": "international3",
+              "modifiers": [
+                "left_option"
+              ]
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
       "description": "英数 + Control + Q / W = Browser Back / Forward",
       "manipulators": [
         {

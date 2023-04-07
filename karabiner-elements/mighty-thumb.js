@@ -299,6 +299,13 @@ rules.add('英数 + Tab = Enter')
     to:   key('return_or_enter')
   });
 
+rules.add('英数 + /(Slash) = \\(Backslash)')
+  .cond(left_thumb)
+  .remap({
+    from: key('slash'),
+    to:   key('international3', 'left_option')
+  });
+
 rules.add('英数 + Control + Q / W = Browser Back / Forward')
   .cond(left_thumb)
   .remap({
