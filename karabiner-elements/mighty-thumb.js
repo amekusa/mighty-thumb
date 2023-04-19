@@ -336,6 +336,10 @@ rules.add('英数 + Control = Numpad Mode (Space=0 NM,=123 JKL=456 UIO=789)')
     to:   key('keypad_3')
   })
   .remap({
+    from: key('period', 'control'),
+    to:   key('keypad_period')
+  })
+  .remap({
     from: key('j', 'control'),
     to:   key('keypad_4')
   })
