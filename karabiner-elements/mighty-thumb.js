@@ -11,6 +11,12 @@ let apps = {
 	sonicpi: 'net.sonic-pi.app'
 };
 
+let conf = {
+	browser:  'Firefox Developer Edition.app',
+	editor:   'VSCodium.app',
+	terminal: 'Terminal.app',
+};
+
 let rules = new RuleSet('Mighty Thumb');
 
 rules.add('Use 英数 as an extra modifier key (Required)')
@@ -316,6 +322,22 @@ rules.add('英数 + Control + Q / W = Browser Back / Forward')
 		from: key('w', 'control'),
 		to:   key('right_arrow', 'command')
 	});
+
+rules.add('英数 + 8/9/0 = Launch Browser/Editor/Terminal')
+	.cond(left_thumb)
+	.remap({
+		from: key('8'),
+		to:   { shell_command: `open -a "${conf.browser}"` }
+	})
+	.remap({
+		from: key('9'),
+		to:   { shell_command: `open -a "${conf.editor}"` }
+	})
+	.remap({
+		from: key('0'),
+		to:   { shell_command: `open -a "${conf.terminal}"` }
+	});
+
 
 rules.add('英数 + Control = Numpad Mode (Space=0 NM,=123 JKL=456 UIO=789)')
 	.cond(left_thumb)

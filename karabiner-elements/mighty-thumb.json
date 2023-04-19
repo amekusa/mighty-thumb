@@ -1396,6 +1396,65 @@
       ]
     },
     {
+      "description": "英数 + 0 = Launch Terminal",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "8"
+          },
+          "to": [
+            {
+              "shell_command": "open -a \"Firefox Developer Edition.app\""
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "9"
+          },
+          "to": [
+            {
+              "shell_command": "open -a \"VSCodium.app\""
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "0"
+          },
+          "to": [
+            {
+              "shell_command": "open -a \"Terminal.app\""
+            }
+          ],
+          "conditions": [
+            {
+              "type": "variable_if",
+              "name": "mightythumb_l",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
       "description": "英数 + Control = Numpad Mode (Space=0 NM,=123 JKL=456 UIO=789)",
       "manipulators": [
         {
