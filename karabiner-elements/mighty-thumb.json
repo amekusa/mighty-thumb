@@ -1396,7 +1396,7 @@
       ]
     },
     {
-      "description": "英数 + 0 = Launch Terminal",
+      "description": "英数 + 8/9/0 = App Switcher",
       "manipulators": [
         {
           "type": "basic",
