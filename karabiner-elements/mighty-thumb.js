@@ -17,7 +17,8 @@ with (require('karabinerge')) {
 		appSwitcher: {
 			'8': 'Firefox Developer Edition.app',
 			'9': 'VSCodium.app',
-			'0': 'Terminal.app'
+			'0': 'Terminal.app',
+			'-': 'Dictionary.app'
 		}
 	};
 
@@ -343,8 +344,11 @@ with (require('karabinerge')) {
 		.remap({
 			from: key('0'),
 			to:   { shell_command: `open -a "${conf.appSwitcher['0']}"` }
+		})
+		.remap({
+			from: key('hyphen'),
+			to:   { shell_command: `open -a "${conf.appSwitcher['-']}"` }
 		});
-
 
 	rules.add('英数 + Control = Numpad Mode (Space=0 NM,=123 JKL=456 UIO=789)')
 		.cond(left_thumb)
