@@ -15,10 +15,29 @@ with (require('karabinerge')) {
 
 	let conf = {
 		appSwitcher: {
-			'8': 'Firefox Developer Edition.app',
-			'9': 'VSCodium.app',
-			'0': 'Terminal.app',
-			'-': 'Dictionary.app'
+			enabled: true,
+			map: [
+				{
+					key: ['8'],
+					app: 'Firefox Developer Edition.app'
+				},
+				{
+					key: ['9'],
+					app: 'VSCodium.app'
+				},
+				{
+					key: ['0'],
+					app: 'Terminal.app'
+				},
+				{
+					key: ['hyphen'],
+					app: 'Dictionary.app'
+				},
+				{
+					key: ['9', 'shift'],
+					app: 'Eclipse.app'
+				}
+			]
 		}
 	};
 
@@ -331,24 +350,17 @@ with (require('karabinerge')) {
 			to:   key('right_arrow', 'command')
 		});
 
-	rules.add('英数 + 8/9/0 = App Switcher')
-		.cond(left_thumb)
-		.remap({
-			from: key('8'),
-			to:   { shell_command: `open -a "${conf.appSwitcher['8']}"` }
-		})
-		.remap({
-			from: key('9'),
-			to:   { shell_command: `open -a "${conf.appSwitcher['9']}"` }
-		})
-		.remap({
-			from: key('0'),
-			to:   { shell_command: `open -a "${conf.appSwitcher['0']}"` }
-		})
-		.remap({
-			from: key('hyphen'),
-			to:   { shell_command: `open -a "${conf.appSwitcher['-']}"` }
-		});
+	if (conf.appSwitcher.enabled) {
+		let rule = rules.add('英数 + 8/9/0 = App Switcher')
+			.cond(left_thumb);
+
+		for (let item of conf.appSwitcher.map) {
+			rule.remap({
+				from: key(...item.key),
+				to:   { shell_command: `open -a "${item.app}"` }
+			});
+		}
+	}
 
 	rules.add('英数 + Control = Numpad Mode (Space=0 NM,=123 JKL=456 UIO=789)')
 		.cond(left_thumb)
