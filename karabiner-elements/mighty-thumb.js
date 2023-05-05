@@ -34,6 +34,10 @@ with (require('karabinerge')) {
 					app: 'Dictionary.app'
 				},
 				{
+					key: ['8', 'shift'],
+					app: 'iTunes.app'
+				},
+				{
 					key: ['9', 'shift'],
 					app: 'Eclipse.app'
 				}
